@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="MonAra Trading Contracting & Services W.L.L. — Professional trading, contracting, construction and integrated technical services in Qatar.">
-  <title>MonAra — Delivering Excellence</title>
+  <meta name="description" content="Atelier Interiors — A multi-disciplinary interior design studio delivering bespoke residential and commercial spaces across Bangladesh.">
+  <title>Atelier Interiors — Timeless Spaces, Inspired by You</title>
 
   <!-- Premium editorial typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,35 +17,25 @@
 
   <!-- Header -->
   <header class="site-header" id="siteHeader">
-    <div class="topbar">
-      <div>Doha, Qatar</div>
-      <div class="topbar-right">
-        <a href="tel:+97400000000">+974 0000 0000</a>
-        <a href="mailto:info@monara.com">info@monara.com</a>
-      </div>
-    </div>
-
     <div class="nav-wrap">
       <a class="brand" href="#">
-        <span class="brand-mark">M</span>
-        <span>
-          <strong>MonAra</strong>
-          <small>TRADING · CONTRACTING & SERVICES</small>
+        <span class="brand-text">
+          <strong>ATELIER</strong>
+          <small>INTERIORS</small>
         </span>
       </a>
 
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
 
-      <nav class="main-nav" aria-label="Primary navigation">
+      <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
         <a class="active" href="#home">Home</a>
-        <a href="#about">About Us</a>
+        <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#clients">Clients</a>
         <a href="#contact">Contact</a>
-        <a class="nav-cta" href="#contact">Request a Quote <span>→</span></a>
+        <a class="nav-cta" href="#contact">Let's Talk <span>→</span></a>
       </nav>
     </div>
   </header>
@@ -57,103 +47,100 @@
       <div class="hero-overlay"></div>
 
       <div class="container hero-content">
-        <p class="eyebrow light">Building Value</p>
-        <h1>Delivering<br>Excellence<span>.</span></h1>
+        <p class="eyebrow light">We Design</p>
+        <h1>Timeless spaces.<br>Inspired by you.</h1>
         <p class="hero-copy">
-          Professional trading, contracting &amp; integrated services
-          built around quality, reliability and long-term partnerships.
+          We create interior environments that balance beauty, function and craftsmanship
+          to elevate the way you live and work.
         </p>
 
-        <div class="hero-tags">
-          <span>Trading</span>
-          <span>Contracting</span>
-          <span>Construction</span>
-          <span>Technical Services</span>
-        </div>
-
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#services">Explore Our Services <span>→</span></a>
-          <a class="btn btn-outline" href="#projects">View Projects <span>→</span></a>
+          <a class="btn btn-outline" href="#projects">View Our Projects <span>→</span></a>
         </div>
 
         <div class="slider-progress">
-          <span class="active">01</span>
+          <span class="dot active"></span>
           <i></i>
-          <span>02</span>
+          <span class="dot"></span>
           <i></i>
-          <span>03</span>
+          <span class="dot"></span>
+          <i></i>
+          <span class="dot"></span>
         </div>
       </div>
     </section>
 
-    <!-- Trust strip -->
-    <section class="trust-strip">
-      <div class="container trust-grid">
-        <div class="trust-item">
-          <span class="trust-number">01</span>
-          <div><strong>Qatar Based</strong><small>Local Expertise</small></div>
-        </div>
-        <div class="trust-item">
-          <span class="trust-number">02</span>
-          <div><strong>Professional Team</strong><small>Skilled Professionals</small></div>
-        </div>
-        <div class="trust-item">
-          <span class="trust-number">03</span>
-          <div><strong>Quality Focused</strong><small>High Standards</small></div>
-        </div>
-        <div class="trust-item">
-          <span class="trust-number">04</span>
-          <div><strong>Safety Driven</strong><small>HSE Commitment</small></div>
-        </div>
-        <div class="trust-item">
-          <span class="trust-number">05</span>
-          <div><strong>Reliable Delivery</strong><small>On Time, Every Time</small></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services intro -->
-    <section class="services-intro" id="services">
+    <!-- Services -->
+    <section class="services" id="services">
       <div class="container">
-        <p class="eyebrow">What We Do</p>
-        <h2>Trade. Build. <em>Deliver.</em></h2>
+        <p class="eyebrow center">What We Do</p>
+        <h2 class="section-title">Design. Detail. Deliver.</h2>
 
-        <div class="service-line">
-          <article class="service-mini">
-            <span class="service-icon">01</span>
-            <h3>Contracting</h3>
-            <p>General contracting for residential, commercial and industrial projects.</p>
-            <a href="#">Explore <span>→</span></a>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 40 L24 8 L42 40 Z"/>
+                <line x1="13" y1="28" x2="35" y2="28"/>
+                <line x1="24" y1="8" x2="24" y2="40"/>
+              </svg>
+            </div>
+            <h3>Bespoke Design</h3>
+            <p>Tailored concepts that reflect your vision and create exceptional living environments.</p>
           </article>
-          <article class="service-mini">
-            <span class="service-icon">02</span>
-            <h3>Trading</h3>
-            <p>Reliable supply of materials, equipment and procurement solutions.</p>
-            <a href="#">Explore <span>→</span></a>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="6" width="36" height="36"/>
+                <line x1="6" y1="24" x2="42" y2="24"/>
+                <line x1="24" y1="6" x2="24" y2="42"/>
+                <rect x="10" y="10" width="10" height="10"/>
+                <rect x="28" y="28" width="10" height="10"/>
+              </svg>
+            </div>
+            <h3>Space Planning</h3>
+            <p>Optimal layouts that maximise flow, comfort and the potential of every room.</p>
           </article>
-          <article class="service-mini">
-            <span class="service-icon">03</span>
-            <h3>Civil Works</h3>
-            <p>Civil construction, structural works and infrastructure services.</p>
-            <a href="#">Explore <span>→</span></a>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 6 L40 16 L40 32 L24 42 L8 32 L8 16 Z"/>
+                <line x1="24" y1="6" x2="24" y2="42"/>
+                <line x1="8" y1="16" x2="40" y2="32"/>
+                <line x1="40" y1="16" x2="8" y2="32"/>
+              </svg>
+            </div>
+            <h3>Material Selection</h3>
+            <p>Carefully curated materials and finishes, selected for quality, aesthetics and longevity.</p>
           </article>
-          <article class="service-mini">
-            <span class="service-icon">04</span>
-            <h3>MEP Services</h3>
-            <p>Mechanical, electrical and plumbing solutions for complete projects.</p>
-            <a href="#">Explore <span>→</span></a>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="24" cy="18" r="10"/>
+                <path d="M16 28 L14 42 L24 38 L34 42 L32 28"/>
+                <line x1="20" y1="16" x2="24" y2="20"/>
+                <line x1="24" y1="20" x2="28" y2="14"/>
+              </svg>
+            </div>
+            <h3>Project Management</h3>
+            <p>Full-service project plans, timelines and execution to ensure seamless delivery.</p>
           </article>
-          <article class="service-mini">
-            <span class="service-icon">05</span>
-            <h3>Maintenance</h3>
-            <p>Comprehensive maintenance and facility support for your assets.</p>
-            <a href="#">Explore <span>→</span></a>
-          </article>
-          <article class="service-mini">
-            <span class="service-icon">06</span>
-            <h3>Other Services</h3>
-            <p>Integrated support tailored to unique project requirements.</p>
-            <a href="#">Explore <span>→</span></a>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 40 L10 22 C10 16 16 12 24 12 C32 12 38 16 38 22 L38 40"/>
+                <line x1="6" y1="40" x2="42" y2="40"/>
+                <line x1="10" y1="30" x2="38" y2="30"/>
+                <path d="M18 40 L18 30"/>
+                <path d="M30 40 L30 30"/>
+              </svg>
+            </div>
+            <h3>Custom Furniture</h3>
+            <p>Bespoke pieces designed and crafted to perfectly complement your interior vision.</p>
           </article>
         </div>
       </div>
@@ -163,38 +150,34 @@
     <section class="projects" id="projects">
       <div class="container projects-layout">
         <div class="projects-intro">
-          <p class="eyebrow light">Selected Projects</p>
-          <h2>Projects<br>We're Proud<br>To Deliver.</h2>
-          <p>Selected work demonstrating our commitment to quality, precision and dependable delivery.</p>
+          <p class="eyebrow light">Selected Work</p>
+          <h2>Spaces<br>we're proud<br>to create</h2>
           <a class="text-link light-link" href="#">Explore All Projects <span>→</span></a>
         </div>
 
         <div class="project-grid">
           <a class="project-card project-large" href="#">
-            <img src="assets/images/project-01.jpg" alt="MonAra residential project">
+            <img src="assets/images/project-01.jpg" alt="Private Residence interior">
             <div class="project-shade"></div>
             <div class="project-meta">
-              <small>Residential</small>
-              <h3>Luxury Villa Project</h3>
-              <span>Doha, Qatar <b>→</b></span>
+              <small>Private Residence</small>
+              <span>Dhaka, Bangladesh</span>
             </div>
           </a>
           <a class="project-card" href="#">
-            <img src="assets/images/project-02.jpg" alt="MonAra commercial project">
+            <img src="assets/images/project-02.jpg" alt="The Aura Restaurant interior">
             <div class="project-shade"></div>
             <div class="project-meta">
-              <small>Commercial</small>
-              <h3>Commercial Building</h3>
-              <span>Doha, Qatar <b>→</b></span>
+              <small>The Aura Restaurant</small>
+              <span>Dhaka, Bangladesh</span>
             </div>
           </a>
           <a class="project-card" href="#">
-            <img src="assets/images/project-03.jpg" alt="MonAra industrial project">
+            <img src="assets/images/project-03.jpg" alt="Corporate Office interior">
             <div class="project-shade"></div>
             <div class="project-meta">
-              <small>Industrial</small>
-              <h3>Industrial Facility</h3>
-              <span>Mesaieed, Qatar <b>→</b></span>
+              <small>Corporate Office</small>
+              <span>Dhaka, Bangladesh</span>
             </div>
           </a>
         </div>
@@ -204,21 +187,21 @@
     <!-- About -->
     <section class="about" id="about">
       <div class="about-image">
-        <img src="assets/images/about.jpg" alt="MonAra project">
+        <img src="assets/images/about.jpg" alt="Luxury dining interior">
       </div>
       <div class="about-copy">
         <div class="about-inner">
-          <p class="eyebrow">About MonAra</p>
-          <h2>Building partnerships<br>that stand the<br>test of <em>time.</em></h2>
-          <div class="editorial-rule"></div>
+          <p class="eyebrow">About Us</p>
+          <h2>Designing experiences<br>that stand the<br>test of time.</h2>
           <p>
-            MonAra Trading Contracting &amp; Services W.L.L. is a Qatar-based
-            company delivering professional trading, contracting, construction
-            and integrated technical services.
+            Atelier Interiors is a multi-disciplinary interior design
+            studio delivering bespoke residential and commercial spaces
+            across Bangladesh.
           </p>
           <p>
-            We combine practical expertise with disciplined execution to deliver
-            dependable solutions for our clients and build relationships that last.
+            We combine creativity with technical expertise to
+            craft interiors that are beautiful, functional and
+            uniquely yours.
           </p>
           <a class="btn btn-outline-dark" href="#">Learn More About Us <span>→</span></a>
         </div>
@@ -228,91 +211,70 @@
     <!-- Stats -->
     <section class="stats">
       <div class="container stats-grid">
-        <div class="stat"><strong>10+</strong><span>Years of Experience</span></div>
-        <div class="stat"><strong>250+</strong><span>Projects Completed</span></div>
-        <div class="stat"><strong>15+</strong><span>Skilled Professionals</span></div>
-        <div class="stat"><strong>98%</strong><span>Client Satisfaction</span></div>
-      </div>
-    </section>
-
-    <!-- Why MonAra -->
-    <section class="why">
-      <div class="why-bg"></div>
-      <div class="why-overlay"></div>
-      <div class="container why-layout">
-        <div>
-          <p class="eyebrow light">Why MonAra</p>
-          <h2>Built on Quality.<br>Driven by <em>Trust.</em></h2>
+        <div class="stat">
+          <strong>10+</strong>
+          <span>Years of Experience</span>
         </div>
-        <div class="why-list">
-          <div><span>01</span><div><strong>Quality First</strong><p>High standards across every project.</p></div></div>
-          <div><span>02</span><div><strong>Experienced Team</strong><p>Skilled professionals with practical expertise.</p></div></div>
-          <div><span>03</span><div><strong>Reliable Delivery</strong><p>Focused on dependable project execution.</p></div></div>
-          <div><span>04</span><div><strong>Safety Commitment</strong><p>Safety remains central to our operations.</p></div></div>
-          <div><span>05</span><div><strong>Cost Effective</strong><p>Practical solutions without compromising quality.</p></div></div>
-          <div><span>06</span><div><strong>Client Focused</strong><p>Long-term relationships built on trust.</p></div></div>
+        <div class="stat">
+          <strong>250+</strong>
+          <span>Projects Completed</span>
         </div>
-        <a class="profile-link" href="#">Download Company Profile <span>↓</span></a>
-      </div>
-    </section>
-
-    <!-- Clients -->
-    <section class="clients" id="clients">
-      <div class="container">
-        <p class="eyebrow">Trusted by Our Clients</p>
-        <h2>Trusted to <em>Deliver.</em></h2>
-        <div class="client-logos">
-          <div>QATAR</div>
-          <div>QDB</div>
-          <div>ALMAHA</div>
-          <div>UDC</div>
-          <div>HBK</div>
-          <div>QPMC</div>
+        <div class="stat">
+          <strong>15+</strong>
+          <span>Skilled Professionals</span>
+        </div>
+        <div class="stat">
+          <strong>98%</strong>
+          <span>Client Satisfaction</span>
         </div>
       </div>
     </section>
 
-    <!-- Quote -->
-    <section class="quote" id="contact">
-      <div class="quote-image"></div>
-      <div class="quote-overlay"></div>
-      <div class="container quote-layout">
-        <div class="quote-copy">
-          <p class="eyebrow light">Let's Build Something Great</p>
-          <h2>Have a Project<br>In <em>Mind?</em></h2>
-          <p>Tell us about your project and our team will get back to you.</p>
-          <a class="btn btn-primary" href="#quote-form">Request a Quotation <span>→</span></a>
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container testimonials-layout">
+        <div class="testimonials-intro">
+          <p class="eyebrow">Clients Say</p>
+          <h2>Kind words from<br>our valued clients.</h2>
         </div>
 
-        <form class="quote-form" id="quote-form">
-          <div class="form-row">
-            <input type="text" placeholder="Full Name *" required>
-            <input type="text" placeholder="Company Name">
+        <div class="testimonials-slider" id="testimonialSlider">
+          <div class="testimonial-cards">
+            <div class="testimonial-card">
+              <div class="quote-mark">"</div>
+              <p>Atelier Interiors exceeded our expectations. Their attention to detail and understanding of our needs made the entire process seamless and enjoyable.</p>
+              <div class="testimonial-rule"></div>
+              <div class="testimonial-author">
+                <strong>Farhan Ahmed</strong>
+                <span>Homeowner</span>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="quote-mark">"</div>
+              <p>Professional, creative and highly responsive. They transformed our office into a space that truly reflects our brand and culture.</p>
+              <div class="testimonial-rule"></div>
+              <div class="testimonial-author">
+                <strong>Nazrul Islam</strong>
+                <span>Managing Director, TechZone</span>
+              </div>
+            </div>
           </div>
-          <div class="form-row">
-            <input type="email" placeholder="Email Address *" required>
-            <input type="tel" placeholder="Phone Number *" required>
+          <div class="slider-dots">
+            <button class="slider-dot active" data-slide="0" aria-label="View testimonial 1"></button>
+            <button class="slider-dot" data-slide="1" aria-label="View testimonial 2"></button>
           </div>
-          <div class="form-row">
-            <select required>
-              <option value="">Service Required *</option>
-              <option>Contracting</option>
-              <option>Trading</option>
-              <option>Civil Works</option>
-              <option>MEP Services</option>
-              <option>Maintenance</option>
-              <option>Other Services</option>
-            </select>
-            <input type="text" placeholder="Project Location">
-          </div>
-          <textarea placeholder="Project Details / Message"></textarea>
-          <label class="file-upload">
-            <span>Upload Drawings / Files</span>
-            <small>PDF, JPG, PNG, DOCX — Max 10MB</small>
-            <input type="file">
-          </label>
-          <button class="btn btn-primary" type="submit">Submit Request <span>→</span></button>
-        </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+      <div class="cta-bg"></div>
+      <div class="cta-overlay"></div>
+      <div class="container cta-content">
+        <p class="eyebrow light">Let's Create Something Beautiful</p>
+        <h2>Ready to bring your<br>vision to life?</h2>
+        <a class="btn btn-primary" href="#">Start Your Project <span>→</span></a>
       </div>
     </section>
   </main>
@@ -322,43 +284,65 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a class="brand brand-footer" href="#">
-          <span class="brand-mark">M</span>
-          <span><strong>MonAra</strong><small>TRADING · CONTRACTING & SERVICES</small></span>
+          <span class="brand-text">
+            <strong>ATELIER</strong>
+            <small>INTERIORS</small>
+          </span>
         </a>
-        <p>Professional trading, contracting, construction and integrated technical services built around quality and trust.</p>
-        <div class="socials"><a href="#">in</a><a href="#">f</a><a href="#">x</a></div>
+        <p>We design and build elegant, functional interiors that inspire and elevate everyday living.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.993 3.995-.282 1.193.599 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.084.345-.091.375-.293 1.199-.334 1.363-.053.225-.174.271-.402.163-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
       </div>
 
-      <div>
-        <h4>Company</h4>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
         <a href="#about">About Us</a>
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#clients">Clients</a>
-        <a href="#">Careers</a>
+        <a href="#">Journal</a>
         <a href="#contact">Contact</a>
       </div>
 
-      <div>
+      <div class="footer-col">
         <h4>Services</h4>
-        <a href="#services">Contracting</a>
-        <a href="#services">Trading</a>
-        <a href="#services">Civil Works</a>
-        <a href="#services">MEP Services</a>
-        <a href="#services">Maintenance</a>
-        <a href="#services">Other Services</a>
+        <a href="#services">Residential Interior</a>
+        <a href="#services">Commercial Interior</a>
+        <a href="#services">Space Planning</a>
+        <a href="#services">Interior Renovation</a>
+        <a href="#services">Custom Furniture</a>
       </div>
 
-      <div>
-        <h4>Contact</h4>
-        <p>Doha, Qatar</p>
-        <p>+974 0000 0000</p>
-        <p>info@monara.com</p>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          House 12, Road 45,<br>Gulshan 2, Dhaka 1212, Bangladesh
+        </p>
+        <p class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +880 1234 567890
+        </p>
+        <p class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@atelierinteriors.com
+        </p>
       </div>
     </div>
 
     <div class="container footer-bottom">
-      <span>© 2026 MonAra Trading Contracting &amp; Services W.L.L. All Rights Reserved.</span>
+      <span>© 2026 Atelier Interiors. All Rights Reserved.</span>
       <span>Privacy Policy &nbsp; · &nbsp; Terms &amp; Conditions</span>
     </div>
   </footer>
