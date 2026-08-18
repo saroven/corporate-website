@@ -1,0 +1,17 @@
+{
+  "name": "monara-website-v3",
+  "private": true,
+  "version": "3.0.0",
+  "description": "MonAra Trading Contracting & Services W.L.L. — premium corporate website (v3)",
+  "type": "module",
+  "scripts": {
+    "build": "tailwindcss -i ./src/css/app.css -o ./assets/css/app.css --minify && node scripts/build-pages.mjs",
+    "dev": "tailwindcss -i ./src/css/app.css -o ./assets/css/app.css --watch",
+    "pages": "node scripts/build-pages.mjs",
+    "preview": "php -S localhost:8080"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}

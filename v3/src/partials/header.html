@@ -1,0 +1,71 @@
+<!-- Header (dark transparent) -->
+<header class="site-header" id="siteHeader">
+    <div class="container-custom">
+        <div class="header-inner">
+            <!-- Logo -->
+            <a href="/{{LANG_PREFIX}}" aria-label="MonAra Home">
+                <img src="/assets/logo-white.png" alt="MonAra" class="h-8 md:h-9 w-auto" fetchpriority="high">
+            </a>
+
+            <!-- Desktop nav -->
+            <nav class="hidden lg:flex items-center gap-7" aria-label="Main">
+                <a href="/{{LANG_PREFIX}}" class="nav-link is-active">Home</a>
+                <a href="/{{LANG_PREFIX}}about/" class="nav-link">About</a>
+                <a href="/{{LANG_PREFIX}}services/" class="nav-link">Services</a>
+                <a href="/{{LANG_PREFIX}}projects/" class="nav-link">Projects</a>
+                <a href="/{{LANG_PREFIX}}clients/" class="nav-link">Clients</a>
+                <a href="/{{LANG_PREFIX}}careers/" class="nav-link">Careers</a>
+                <a href="/{{LANG_PREFIX}}contact/" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- CTA -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="/{{LANG_PREFIX}}request-quote/" class="btn btn--primary">
+                    REQUEST A QUOTE
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+
+            <!-- Mobile toggle -->
+            <button class="lg:hidden text-white w-10 h-10 flex items-center justify-center"
+                    aria-label="Open menu" aria-expanded="false" data-mobile-toggle>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav__panel">
+        <div class="flex items-center justify-between p-5 border-b border-white/10">
+            <span class="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-white">Menu</span>
+            <button class="text-white/60 hover:text-white w-8 h-8 flex items-center justify-center"
+                    aria-label="Close menu" data-mobile-close>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col p-5 gap-0" aria-label="Mobile">
+            <a href="/{{LANG_PREFIX}}" class="mobile-nav__link is-active">Home</a>
+            <a href="/{{LANG_PREFIX}}about/" class="mobile-nav__link">About</a>
+            <a href="/{{LANG_PREFIX}}services/" class="mobile-nav__link">Services</a>
+            <a href="/{{LANG_PREFIX}}projects/" class="mobile-nav__link">Projects</a>
+            <a href="/{{LANG_PREFIX}}clients/" class="mobile-nav__link">Clients</a>
+            <a href="/{{LANG_PREFIX}}careers/" class="mobile-nav__link">Careers</a>
+            <a href="/{{LANG_PREFIX}}contact/" class="mobile-nav__link">Contact</a>
+        </nav>
+        <div class="mt-auto p-5 border-t border-white/10">
+            <a href="/{{LANG_PREFIX}}request-quote/" class="btn btn--primary w-full justify-center">
+                REQUEST A QUOTE
+                <span class="btn-arrow">→</span>
+            </a>
+        </div>
+    </div>
+</div>
