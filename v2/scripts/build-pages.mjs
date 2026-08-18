@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('..', import.meta.url));
 const partialsDir = join(root, 'src', 'partials');
 const pagesDir = join(root, 'src', 'pages');
-const outDir = join(root, 'public');
+const outDir = root;
 
 const read = (p) => readFileSync(p, 'utf8');
 
@@ -34,10 +34,12 @@ const copyDir = (src, dest) => {
     }
 };
 
-copyDir(join(root, 'assets'), join(outDir, 'assets'));
 copyDir(join(root, 'src', 'js'), join(root, 'assets', 'js'));
-copyDir(join(root, 'src', 'js'), join(outDir, 'assets', 'js'));
-console.log('synced assets → public/assets');
+if (outDir !== root) {
+    copyDir(join(root, 'assets'), join(outDir, 'assets'));
+    copyDir(join(root, 'src', 'js'), join(outDir, 'assets', 'js'));
+}
+console.log(`synced assets → ${outDir}/assets`);
 
 let built = 0;
 for (const file of readdirSync(pagesDir)) {
@@ -56,4 +58,4 @@ for (const file of readdirSync(pagesDir)) {
     console.log(`built ${outFile}`);
 }
 
-console.log(`\nDone — ${built} page(s) written to public/`);
+console.log(`\nDone — ${built} page(s) written to ${outDir}/`);

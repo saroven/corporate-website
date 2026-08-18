@@ -17,12 +17,12 @@ into a Laravel CMS (models: `Service`, `Project`, `Client`, `Career`, `QuoteRequ
 
 ```bash
 npm install
-npm run build      # compiles Tailwind CSS + assembles pages into public/
+npm run build      # compiles Tailwind CSS + assembles pages at the project root
 npm run dev        # Tailwind watch mode (CSS only)
-npm run preview    # serves public/ at http://localhost:8080
+npm run preview    # serves the project root at http://localhost:8080
 ```
 
-Open `public/index.html` directly, or serve `public/`.
+Open `index.html` directly, or serve the project root.
 
 ## Project layout
 
@@ -35,7 +35,7 @@ src/
   js/i18n.js          lightweight EN/AR + RTL preview dictionary
 scripts/build-pages.mjs   assembles partials into final pages, syncs assets
 assets/               images, fonts, PDF placeholder, compiled CSS + JS
-public/               build output (deploy this folder)
+index.html            build output (project root)
 ```
 
 ## Routes
