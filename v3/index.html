@@ -1,488 +1,368 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr" data-page="{{PAGE_ID}}">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{META_TITLE}}</title>
-    <meta name="description" content="{{META_DESC}}">
-    <meta name="robots" content="index,follow">
-    <link rel="canonical" href="{{CANONICAL}}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MonAra Trading Contracting & Services W.L.L. — Professional trading, contracting, construction and integrated technical services in Qatar.">
+  <title>MonAra — Delivering Excellence</title>
 
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{META_TITLE}}">
-    <meta property="og:description" content="{{META_DESC}}">
-    <meta property="og:url" content="{{CANONICAL}}">
-    <meta property="og:image" content="{{OG_IMAGE}}">
+  <!-- Premium editorial typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/png" href="/assets/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap">
-    <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Minimal topbar — language toggle only -->
-<div class="bg-coal border-b border-white/8" id="topbar">
-    <div class="container-custom h-8 flex items-center justify-end">
-        <button class="flex items-center gap-1.5 text-white/50 hover:text-white transition-colors text-xs tracking-wider uppercase"
-                data-lang-switch aria-label="Switch language">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="2" y1="12" x2="22" y2="12"/>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-            <span data-lang-label>عربي</span>
-        </button>
-    </div>
-</div>
-
-<!-- Header (dark transparent) -->
-<header class="site-header" id="siteHeader">
-    <div class="container-custom">
-        <div class="header-inner">
-            <!-- Logo -->
-            <a href="/{{LANG_PREFIX}}" aria-label="MonAra Home">
-                <img src="/assets/logo-white.png" alt="MonAra" class="h-8 md:h-9 w-auto" fetchpriority="high">
-            </a>
-
-            <!-- Desktop nav -->
-            <nav class="hidden lg:flex items-center gap-7" aria-label="Main">
-                <a href="/{{LANG_PREFIX}}" class="nav-link is-active">Home</a>
-                <a href="/{{LANG_PREFIX}}about/" class="nav-link">About</a>
-                <a href="/{{LANG_PREFIX}}services/" class="nav-link">Services</a>
-                <a href="/{{LANG_PREFIX}}projects/" class="nav-link">Projects</a>
-                <a href="/{{LANG_PREFIX}}clients/" class="nav-link">Clients</a>
-                <a href="/{{LANG_PREFIX}}careers/" class="nav-link">Careers</a>
-                <a href="/{{LANG_PREFIX}}contact/" class="nav-link">Contact</a>
-            </nav>
-
-            <!-- CTA -->
-            <div class="hidden lg:flex items-center gap-4">
-                <a href="/{{LANG_PREFIX}}request-quote/" class="btn btn--primary">
-                    REQUEST A QUOTE
-                    <span class="btn-arrow">→</span>
-                </a>
-            </div>
-
-            <!-- Mobile toggle -->
-            <button class="lg:hidden text-white w-10 h-10 flex items-center justify-center"
-                    aria-label="Open menu" aria-expanded="false" data-mobile-toggle>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <line x1="3" y1="6" x2="21" y2="6"/>
-                    <line x1="3" y1="12" x2="21" y2="12"/>
-                    <line x1="3" y1="18" x2="21" y2="18"/>
-                </svg>
-            </button>
-        </div>
-    </div>
-</header>
-
-<!-- Mobile nav -->
-<div class="mobile-nav" id="mobileNav" aria-hidden="true">
-    <div class="mobile-nav__panel">
-        <div class="flex items-center justify-between p-5 border-b border-white/10">
-            <span class="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-white">Menu</span>
-            <button class="text-white/60 hover:text-white w-8 h-8 flex items-center justify-center"
-                    aria-label="Close menu" data-mobile-close>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <line x1="18" y1="6" x2="6" y2="18"/>
-                    <line x1="6" y1="6" x2="18" y2="18"/>
-                </svg>
-            </button>
-        </div>
-        <nav class="flex flex-col p-5 gap-0" aria-label="Mobile">
-            <a href="/{{LANG_PREFIX}}" class="mobile-nav__link is-active">Home</a>
-            <a href="/{{LANG_PREFIX}}about/" class="mobile-nav__link">About</a>
-            <a href="/{{LANG_PREFIX}}services/" class="mobile-nav__link">Services</a>
-            <a href="/{{LANG_PREFIX}}projects/" class="mobile-nav__link">Projects</a>
-            <a href="/{{LANG_PREFIX}}clients/" class="mobile-nav__link">Clients</a>
-            <a href="/{{LANG_PREFIX}}careers/" class="mobile-nav__link">Careers</a>
-            <a href="/{{LANG_PREFIX}}contact/" class="mobile-nav__link">Contact</a>
-        </nav>
-        <div class="mt-auto p-5 border-t border-white/10">
-            <a href="/{{LANG_PREFIX}}request-quote/" class="btn btn--primary w-full justify-center">
-                REQUEST A QUOTE
-                <span class="btn-arrow">→</span>
-            </a>
-        </div>
-    </div>
-</div>
-
-
-<!-- Hero -->
-<section class="hero" id="hero">
-    <div class="hero__media">
-        <img src="/assets/img/hero.jpg" alt="MonAra construction site" width="1920" height="1080" fetchpriority="high">
-        <div class="hero__overlay"></div>
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="topbar">
+      <div>Doha, Qatar</div>
+      <div class="topbar-right">
+        <a href="tel:+97400000000">+974 0000 0000</a>
+        <a href="mailto:info@monara.com">info@monara.com</a>
+      </div>
     </div>
 
-    <div class="container-custom">
-        <div class="hero__content reveal">
-            <div class="flex items-center gap-3 mb-5">
-                <span class="hero-keyword">Contracting</span>
-                <span class="hero-keyword">Trading</span>
-                <span class="hero-keyword">Services</span>
-            </div>
+    <div class="nav-wrap">
+      <a class="brand" href="#">
+        <span class="brand-mark">M</span>
+        <span>
+          <strong>MonAra</strong>
+          <small>TRADING · CONTRACTING & SERVICES</small>
+        </span>
+      </a>
 
-            <h1 class="h-display text-white mb-5">
-                Delivering Excellence.<br>Building Value.
-            </h1>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
 
-            <p class="text-white/65 text-base leading-relaxed max-w-lg mb-7">
-                Integrated construction, maintenance, and technical services across Qatar — built on trust, delivered with precision.
-            </p>
-
-            <div class="flex flex-wrap items-center gap-4">
-                <a href="/projects/" class="btn btn--primary">
-                    EXPLORE OUR PROJECTS
-                    <span class="btn-arrow">→</span>
-                </a>
-                <a href="/services/" class="btn btn--outline">
-                    VIEW SERVICES
-                    <span class="btn-arrow">→</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Indicators -->
-        <div class="hero-indicators mt-12 reveal" data-delay="2">
-            <span class="active">01</span>
-            <span class="line"></span>
-            <span>02</span>
-            <span class="line"></span>
-            <span>03</span>
-        </div>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="#contact">Request a Quote <span>→</span></a>
+      </nav>
     </div>
-</section>
+  </header>
 
-<!-- Services -->
-<section class="bg-paper section-pad" id="services">
-    <div class="container-custom">
-        <div class="text-center mb-12 reveal">
-            <span class="eyebrow eyebrow--center">What We Do</span>
-            <h2 class="h-section mt-3">Construct. Deliver. Protect.</h2>
-        </div>
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-media"></div>
+      <div class="hero-overlay"></div>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            <!-- Contracting -->
-            <div class="svc-item reveal" data-delay="1">
-                <div class="svc-icon">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 9h.01M15 9h.01M9 13h.01M15 13h.01"/>
-                    </svg>
-                </div>
-                <h3>Contracting</h3>
-                <p>Full-scale construction and project delivery</p>
-            </div>
-
-            <!-- Trading -->
-            <div class="svc-item reveal" data-delay="2">
-                <div class="svc-icon">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M1 12h4l3-9 6 18 3-9h6"/>
-                    </svg>
-                </div>
-                <h3>Trading</h3>
-                <p>Materials, equipment, and supply solutions</p>
-            </div>
-
-            <!-- Civil Works -->
-            <div class="svc-item reveal" data-delay="3">
-                <div class="svc-icon">
-                    <svg viewBox="0 0 24 24">
-                        <rect x="2" y="6" width="20" height="15" rx="1"/>
-                        <path d="M2 10h20M6 6V3M10 6V3M14 6V3"/>
-                    </svg>
-                </div>
-                <h3>Civil Works</h3>
-                <p>Infrastructure and structural works</p>
-            </div>
-
-            <!-- MEP Services -->
-            <div class="svc-item reveal" data-delay="4">
-                <div class="svc-icon">
-                    <svg viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="3"/>
-                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-                    </svg>
-                </div>
-                <h3>MEP Services</h3>
-                <p>Mechanical, electrical, and plumbing</p>
-            </div>
-
-            <!-- Maintenance -->
-            <div class="svc-item reveal" data-delay="5">
-                <div class="svc-icon">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                    </svg>
-                </div>
-                <h3>Maintenance</h3>
-                <p>Preventive and corrective maintenance</p>
-            </div>
-
-            <!-- Other Services -->
-            <div class="svc-item reveal" data-delay="6">
-                <div class="svc-icon">
-                    <svg viewBox="0 0 24 24">
-                        <rect x="3" y="3" width="7" height="7"/>
-                        <rect x="14" y="3" width="7" height="7"/>
-                        <rect x="14" y="14" width="7" height="7"/>
-                        <rect x="3" y="14" width="7" height="7"/>
-                    </svg>
-                </div>
-                <h3>Other Services</h3>
-                <p>Specialised technical solutions</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Selected Work -->
-<section class="bg-ink section-pad" id="projects">
-    <div class="container-custom">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <!-- Left: text -->
-            <div class="lg:col-span-4 reveal">
-                <span class="eyebrow eyebrow--light">Selected Work</span>
-                <h2 class="h-display text-white mt-4 mb-6">
-                    Work We're<br>Proud To Deliver
-                </h2>
-                <a href="/projects/" class="link-arrow link-arrow--light">
-                    EXPLORE ALL PROJECTS
-                </a>
-            </div>
-
-            <!-- Right: project cards -->
-            <div class="lg:col-span-8 grid grid-cols-2 gap-3">
-                <a href="/projects/qatar-foundation/" class="proj-card aspect-[3/4] reveal" data-delay="1">
-                    <img src="/assets/img/projects/project1.jpg" alt="Qatar Foundation project" width="1200" height="750">
-                    <div class="proj-card__info">
-                        <h3>Qatar Foundation</h3>
-                        <span>Doha · Contracting</span>
-                    </div>
-                    <div class="proj-card__arrow">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-                    </div>
-                </a>
-
-                <div class="grid gap-3">
-                    <a href="/projects/lusail-city/" class="proj-card aspect-[4/3] reveal" data-delay="2">
-                        <img src="/assets/img/projects/project2.jpg" alt="Lusail City project" width="1200" height="750">
-                        <div class="proj-card__info">
-                            <h3>Lusail City</h3>
-                            <span>Lusail · Civil Works</span>
-                        </div>
-                        <div class="proj-card__arrow">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-                        </div>
-                    </a>
-
-                    <a href="/projects/msheireb-properties/" class="proj-card aspect-[4/3] reveal" data-delay="3">
-                        <img src="/assets/img/projects/project3.jpg" alt="Msheireb Properties project" width="1200" height="750">
-                        <div class="proj-card__info">
-                            <h3>Msheireb Properties</h3>
-                            <span>Doha · MEP Services</span>
-                        </div>
-                        <div class="proj-card__arrow">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- About -->
-<section class="about-split reveal">
-    <div class="about-split__media">
-        <img src="/assets/img/about.jpg" alt="MonAra team at work" width="1200" height="900">
-    </div>
-    <div class="about-split__content">
-        <span class="eyebrow">About MonAra</span>
-        <h2 class="h-display--sm mt-4 mb-6">
-            Building partnerships that stand the test of time.
-        </h2>
-        <p class="text-muted leading-relaxed mb-6">
-            Since 2009, MonAra Trading Contracting & Services W.L.L. has delivered integrated construction, trading, and technical services across Qatar. We combine local expertise with international standards to execute projects safely, on time, and to the highest quality.
+      <div class="container hero-content">
+        <p class="eyebrow light">Building Value</p>
+        <h1>Delivering<br>Excellence<span>.</span></h1>
+        <p class="hero-copy">
+          Professional trading, contracting &amp; integrated services
+          built around quality, reliability and long-term partnerships.
         </p>
-        <a href="/about/" class="link-arrow">
-            LEARN MORE ABOUT US
+
+        <div class="hero-tags">
+          <span>Trading</span>
+          <span>Contracting</span>
+          <span>Construction</span>
+          <span>Technical Services</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#services">Explore Our Services <span>→</span></a>
+          <a class="btn btn-outline" href="#projects">View Projects <span>→</span></a>
+        </div>
+
+        <div class="slider-progress">
+          <span class="active">01</span>
+          <i></i>
+          <span>02</span>
+          <i></i>
+          <span>03</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <span class="trust-number">01</span>
+          <div><strong>Qatar Based</strong><small>Local Expertise</small></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-number">02</span>
+          <div><strong>Professional Team</strong><small>Skilled Professionals</small></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-number">03</span>
+          <div><strong>Quality Focused</strong><small>High Standards</small></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-number">04</span>
+          <div><strong>Safety Driven</strong><small>HSE Commitment</small></div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-number">05</span>
+          <div><strong>Reliable Delivery</strong><small>On Time, Every Time</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services intro -->
+    <section class="services-intro" id="services">
+      <div class="container">
+        <p class="eyebrow">What We Do</p>
+        <h2>Trade. Build. <em>Deliver.</em></h2>
+
+        <div class="service-line">
+          <article class="service-mini">
+            <span class="service-icon">01</span>
+            <h3>Contracting</h3>
+            <p>General contracting for residential, commercial and industrial projects.</p>
+            <a href="#">Explore <span>→</span></a>
+          </article>
+          <article class="service-mini">
+            <span class="service-icon">02</span>
+            <h3>Trading</h3>
+            <p>Reliable supply of materials, equipment and procurement solutions.</p>
+            <a href="#">Explore <span>→</span></a>
+          </article>
+          <article class="service-mini">
+            <span class="service-icon">03</span>
+            <h3>Civil Works</h3>
+            <p>Civil construction, structural works and infrastructure services.</p>
+            <a href="#">Explore <span>→</span></a>
+          </article>
+          <article class="service-mini">
+            <span class="service-icon">04</span>
+            <h3>MEP Services</h3>
+            <p>Mechanical, electrical and plumbing solutions for complete projects.</p>
+            <a href="#">Explore <span>→</span></a>
+          </article>
+          <article class="service-mini">
+            <span class="service-icon">05</span>
+            <h3>Maintenance</h3>
+            <p>Comprehensive maintenance and facility support for your assets.</p>
+            <a href="#">Explore <span>→</span></a>
+          </article>
+          <article class="service-mini">
+            <span class="service-icon">06</span>
+            <h3>Other Services</h3>
+            <p>Integrated support tailored to unique project requirements.</p>
+            <a href="#">Explore <span>→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <div class="container projects-layout">
+        <div class="projects-intro">
+          <p class="eyebrow light">Selected Projects</p>
+          <h2>Projects<br>We're Proud<br>To Deliver.</h2>
+          <p>Selected work demonstrating our commitment to quality, precision and dependable delivery.</p>
+          <a class="text-link light-link" href="#">Explore All Projects <span>→</span></a>
+        </div>
+
+        <div class="project-grid">
+          <a class="project-card project-large" href="#">
+            <img src="assets/images/project-01.jpg" alt="MonAra residential project">
+            <div class="project-shade"></div>
+            <div class="project-meta">
+              <small>Residential</small>
+              <h3>Luxury Villa Project</h3>
+              <span>Doha, Qatar <b>→</b></span>
+            </div>
+          </a>
+          <a class="project-card" href="#">
+            <img src="assets/images/project-02.jpg" alt="MonAra commercial project">
+            <div class="project-shade"></div>
+            <div class="project-meta">
+              <small>Commercial</small>
+              <h3>Commercial Building</h3>
+              <span>Doha, Qatar <b>→</b></span>
+            </div>
+          </a>
+          <a class="project-card" href="#">
+            <img src="assets/images/project-03.jpg" alt="MonAra industrial project">
+            <div class="project-shade"></div>
+            <div class="project-meta">
+              <small>Industrial</small>
+              <h3>Industrial Facility</h3>
+              <span>Mesaieed, Qatar <b>→</b></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="about-image">
+        <img src="assets/images/about.jpg" alt="MonAra project">
+      </div>
+      <div class="about-copy">
+        <div class="about-inner">
+          <p class="eyebrow">About MonAra</p>
+          <h2>Building partnerships<br>that stand the<br>test of <em>time.</em></h2>
+          <div class="editorial-rule"></div>
+          <p>
+            MonAra Trading Contracting &amp; Services W.L.L. is a Qatar-based
+            company delivering professional trading, contracting, construction
+            and integrated technical services.
+          </p>
+          <p>
+            We combine practical expertise with disciplined execution to deliver
+            dependable solutions for our clients and build relationships that last.
+          </p>
+          <a class="btn btn-outline-dark" href="#">Learn More About Us <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat"><strong>10+</strong><span>Years of Experience</span></div>
+        <div class="stat"><strong>250+</strong><span>Projects Completed</span></div>
+        <div class="stat"><strong>15+</strong><span>Skilled Professionals</span></div>
+        <div class="stat"><strong>98%</strong><span>Client Satisfaction</span></div>
+      </div>
+    </section>
+
+    <!-- Why MonAra -->
+    <section class="why">
+      <div class="why-bg"></div>
+      <div class="why-overlay"></div>
+      <div class="container why-layout">
+        <div>
+          <p class="eyebrow light">Why MonAra</p>
+          <h2>Built on Quality.<br>Driven by <em>Trust.</em></h2>
+        </div>
+        <div class="why-list">
+          <div><span>01</span><div><strong>Quality First</strong><p>High standards across every project.</p></div></div>
+          <div><span>02</span><div><strong>Experienced Team</strong><p>Skilled professionals with practical expertise.</p></div></div>
+          <div><span>03</span><div><strong>Reliable Delivery</strong><p>Focused on dependable project execution.</p></div></div>
+          <div><span>04</span><div><strong>Safety Commitment</strong><p>Safety remains central to our operations.</p></div></div>
+          <div><span>05</span><div><strong>Cost Effective</strong><p>Practical solutions without compromising quality.</p></div></div>
+          <div><span>06</span><div><strong>Client Focused</strong><p>Long-term relationships built on trust.</p></div></div>
+        </div>
+        <a class="profile-link" href="#">Download Company Profile <span>↓</span></a>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="clients" id="clients">
+      <div class="container">
+        <p class="eyebrow">Trusted by Our Clients</p>
+        <h2>Trusted to <em>Deliver.</em></h2>
+        <div class="client-logos">
+          <div>QATAR</div>
+          <div>QDB</div>
+          <div>ALMAHA</div>
+          <div>UDC</div>
+          <div>HBK</div>
+          <div>QPMC</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="quote" id="contact">
+      <div class="quote-image"></div>
+      <div class="quote-overlay"></div>
+      <div class="container quote-layout">
+        <div class="quote-copy">
+          <p class="eyebrow light">Let's Build Something Great</p>
+          <h2>Have a Project<br>In <em>Mind?</em></h2>
+          <p>Tell us about your project and our team will get back to you.</p>
+          <a class="btn btn-primary" href="#quote-form">Request a Quotation <span>→</span></a>
+        </div>
+
+        <form class="quote-form" id="quote-form">
+          <div class="form-row">
+            <input type="text" placeholder="Full Name *" required>
+            <input type="text" placeholder="Company Name">
+          </div>
+          <div class="form-row">
+            <input type="email" placeholder="Email Address *" required>
+            <input type="tel" placeholder="Phone Number *" required>
+          </div>
+          <div class="form-row">
+            <select required>
+              <option value="">Service Required *</option>
+              <option>Contracting</option>
+              <option>Trading</option>
+              <option>Civil Works</option>
+              <option>MEP Services</option>
+              <option>Maintenance</option>
+              <option>Other Services</option>
+            </select>
+            <input type="text" placeholder="Project Location">
+          </div>
+          <textarea placeholder="Project Details / Message"></textarea>
+          <label class="file-upload">
+            <span>Upload Drawings / Files</span>
+            <small>PDF, JPG, PNG, DOCX — Max 10MB</small>
+            <input type="file">
+          </label>
+          <button class="btn btn-primary" type="submit">Submit Request <span>→</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="#">
+          <span class="brand-mark">M</span>
+          <span><strong>MonAra</strong><small>TRADING · CONTRACTING & SERVICES</small></span>
         </a>
-    </div>
-</section>
+        <p>Professional trading, contracting, construction and integrated technical services built around quality and trust.</p>
+        <div class="socials"><a href="#">in</a><a href="#">f</a><a href="#">x</a></div>
+      </div>
 
-<!-- Statistics -->
-<section class="bg-paper section-pad" id="stats">
-    <div class="container-custom">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-0">
-            <div class="stat-item reveal" data-delay="1">
-                <div class="stat-num">10<span class="text-brand">+</span></div>
-                <span class="stat-label">Years of Experience</span>
-            </div>
-            <div class="stat-item reveal" data-delay="2">
-                <div class="stat-num">50<span class="text-brand">+</span></div>
-                <span class="stat-label">Projects Completed</span>
-            </div>
-            <div class="stat-item reveal" data-delay="3">
-                <div class="stat-num">6</div>
-                <span class="stat-label">Integrated Services</span>
-            </div>
-            <div class="stat-item reveal" data-delay="4">
-                <div class="stat-num">100<span class="text-brand">%</span></div>
-                <span class="stat-label">Quality Commitment</span>
-            </div>
-        </div>
-    </div>
-</section>
+      <div>
+        <h4>Company</h4>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#clients">Clients</a>
+        <a href="#">Careers</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-<!-- Testimonials -->
-<section class="bg-ivory section-pad" id="testimonials">
-    <div class="container-custom">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <!-- Left: heading -->
-            <div class="reveal">
-                <span class="eyebrow">Our Commitment</span>
-                <h2 class="h-display--sm mt-4 mb-6">
-                    Built on trust,<br>delivered with excellence.
-                </h2>
-            </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Contracting</a>
+        <a href="#services">Trading</a>
+        <a href="#services">Civil Works</a>
+        <a href="#services">MEP Services</a>
+        <a href="#services">Maintenance</a>
+        <a href="#services">Other Services</a>
+      </div>
 
-            <!-- Right: trust statements -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div class="testi-quote reveal" data-delay="1">
-                    <p>
-                        Every project we undertake reflects our unwavering commitment to quality, safety, and client satisfaction. We deliver on time, on budget, and to the highest standards.
-                    </p>
-                    <div class="testi-author">
-                        <strong>Quality Assurance</strong>
-                        <span>ISO 9001:2015 Certified</span>
-                    </div>
-                </div>
-
-                <div class="testi-quote reveal" data-delay="2">
-                    <p>
-                        Our integrated approach means clients benefit from a single, trusted partner for construction, maintenance, and all technical services throughout the project lifecycle.
-                    </p>
-                    <div class="testi-author">
-                        <strong>Client Partnership</strong>
-                        <span>End-to-End Service Delivery</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section section-pad reveal">
-    <div class="cta-section__media">
-        <img src="/assets/img/quote-bg.jpg" alt="MonAra project" width="1600" height="900">
-        <div class="cta-section__scrim"></div>
-    </div>
-    <div class="container-custom">
-        <div class="cta-section__content max-w-xl">
-            <span class="eyebrow eyebrow--light">Let's Build Something Great</span>
-            <h2 class="h-display text-white mt-4 mb-5">
-                Have a project in mind?
-            </h2>
-            <p class="text-white/60 text-base leading-relaxed mb-7">
-                From initial consultation to final handover — our team is ready to bring your vision to life with precision and care.
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="/contact/" class="btn btn--primary">
-                    START YOUR PROJECT
-                    <span class="btn-arrow">→</span>
-                </a>
-                <a href="/request-quote/" class="btn btn--outline">
-                    REQUEST A QUOTE
-                    <span class="btn-arrow">→</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="site-footer">
-    <!-- Main footer -->
-    <div class="container-custom section-pad">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-            <!-- Brand -->
-            <div>
-                <a href="/{{LANG_PREFIX}}" class="inline-block mb-5">
-                    <img src="/assets/logo-white.png" alt="MonAra" class="h-9 w-auto">
-                </a>
-                <p class="text-sm text-white/50 leading-relaxed max-w-xs mb-5">
-                    Trading Contracting & Services W.L.L. — delivering excellence in construction, maintenance, and integrated technical services across Qatar since 2009.
-                </p>
-                <div class="flex gap-3">
-                    <a href="#" class="footer-social" aria-label="LinkedIn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                    </a>
-                    <a href="#" class="footer-social" aria-label="Instagram">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <a href="/{{LANG_PREFIX}}about/" class="footer-link">About Us</a>
-                <a href="/{{LANG_PREFIX}}services/" class="footer-link">Services</a>
-                <a href="/{{LANG_PREFIX}}projects/" class="footer-link">Projects</a>
-                <a href="/{{LANG_PREFIX}}clients/" class="footer-link">Clients</a>
-                <a href="/{{LANG_PREFIX}}careers/" class="footer-link">Careers</a>
-                <a href="/{{LANG_PREFIX}}contact/" class="footer-link">Contact</a>
-            </div>
-
-            <!-- Services -->
-            <div class="footer-col">
-                <h4>Services</h4>
-                <a href="/{{LANG_PREFIX}}services/contracting/" class="footer-link">Contracting</a>
-                <a href="/{{LANG_PREFIX}}services/trading/" class="footer-link">Trading</a>
-                <a href="/{{LANG_PREFIX}}services/civil-works/" class="footer-link">Civil Works</a>
-                <a href="/{{LANG_PREFIX}}services/mep-services/" class="footer-link">MEP Services</a>
-                <a href="/{{LANG_PREFIX}}services/maintenance/" class="footer-link">Maintenance</a>
-                <a href="/{{LANG_PREFIX}}services/other-services/" class="footer-link">Other Services</a>
-            </div>
-
-            <!-- Contact -->
-            <div class="footer-col footer-contact">
-                <h4>Contact</h4>
-                <a href="tel:+97433730680">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    +974 3373 0680
-                </a>
-                <a href="mailto:monara1902@gmail.com">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
-                    monara1902@gmail.com
-                </a>
-                <a href="https://maps.google.com/?q=Retaj+Building+185+Floor+3+Office+311+B+Ring+Road+Doha+Qatar" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    Retaj Building 185, Floor 3, Office 311<br>B Ring Road, Doha, Qatar
-                </a>
-            </div>
-        </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Doha, Qatar</p>
+        <p>+974 0000 0000</p>
+        <p>info@monara.com</p>
+      </div>
     </div>
 
-    <!-- Bottom bar -->
-    <div class="border-t border-white/8">
-        <div class="container-custom py-5 flex flex-col md:flex-row items-center justify-between gap-3">
-            <p class="text-xs text-white/40">&copy; 2009–2026 MonAra Trading Contracting & Services W.L.L. All rights reserved.</p>
-            <div class="flex items-center gap-5">
-                <a href="/{{LANG_PREFIX}}privacy/" class="text-xs text-white/40 hover:text-white transition-colors">Privacy Policy</a>
-                <a href="/{{LANG_PREFIX}}terms/" class="text-xs text-white/40 hover:text-white transition-colors">Terms of Service</a>
-            </div>
-        </div>
+    <div class="container footer-bottom">
+      <span>© 2026 MonAra Trading Contracting &amp; Services W.L.L. All Rights Reserved.</span>
+      <span>Privacy Policy &nbsp; · &nbsp; Terms &amp; Conditions</span>
     </div>
-</footer>
+  </footer>
 
-    <script src="/js/i18n.js"></script>
-    <script src="/js/main.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
