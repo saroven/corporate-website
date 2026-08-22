@@ -602,27 +602,45 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .cv-drop-box .field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, #777 50%), linear-gradient(135deg, #777 50%, transparent 50%) !important; background-position: calc(100% - 18px) 21px, calc(100% - 14px) 21px !important; background-size: 5px 5px !important; background-repeat: no-repeat !important; }
 [dir="rtl"] .cv-drop-box .field select { background-position: 18px 21px, 14px 21px !important; }
 
-/* Contact page */
-.contact-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(36px, 4vw, 64px); }
-.contact-form { padding: clamp(28px, 3vw, 42px); border: 1px solid #e5e5e5; background: #fff; }
-.contact-form h2 { margin: 0 0 24px; font-family: var(--font-display); font-size: clamp(24px, 2vw, 32px); font-weight: 700; letter-spacing: -.035em; }
+/* Enhanced Contact Page Styles */
+.contact-hub-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-block-end: 48px; }
+.contact-hub-card { padding: 26px 22px; border: 1px solid #e4e4e4; background: #fff; display: flex; flex-direction: column; transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition); text-decoration: none; color: inherit; }
+.contact-hub-card:hover { transform: translateY(-4px); border-color: rgba(249,115,22,.45); box-shadow: 0 12px 30px rgba(0,0,0,.06); }
+.contact-hub-icon { width: 44px; height: 44px; display: grid; place-items: center; background: rgba(249,115,22,.08); color: var(--orange); margin-block-end: 16px; border-radius: 2px; }
+.contact-hub-icon svg { width: 22px; height: 22px; }
+.contact-hub-card h3 { margin: 0 0 6px; font-family: var(--font-display); font-size: 15px; font-weight: 700; letter-spacing: -.01em; color: var(--text); }
+.contact-hub-card p { margin: 0 0 10px; color: #555; font-size: 13.5px; line-height: 1.45; font-weight: 600; }
+.contact-hub-card span.hub-sub { margin-top: auto; font-size: 11.5px; color: var(--orange); font-weight: 650; letter-spacing: .02em; display: inline-flex; align-items: center; gap: 4px; }
+
+.contact-main-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: clamp(32px, 3.5vw, 56px); align-items: start; }
+.contact-form { padding: clamp(28px, 3.5vw, 42px); border: 1px solid #e5e5e5; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,.03); }
+.contact-form h2 { margin: 0 0 8px; font-family: var(--font-display); font-size: clamp(24px, 2vw, 30px); font-weight: 750; letter-spacing: -.03em; }
+.contact-form-intro { margin: 0 0 24px; color: #666; font-size: 14px; line-height: 1.6; }
+.contact-form .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .contact-form .field { margin-block-end: 18px; position: relative; }
-.contact-form .field label { position: static; display: block; margin-block-end: 6px; color: #333; font-size: 13px; font-weight: 600; letter-spacing: .005em; }
+.contact-form .field label { position: static !important; display: block !important; margin-block-end: 6px !important; color: #222 !important; font-size: 12.5px !important; font-weight: 650 !important; letter-spacing: normal !important; pointer-events: auto !important; }
 .contact-form .field label em { color: var(--orange); font-style: normal; }
-.contact-form .field input, .contact-form .field select, .contact-form .field textarea { width: 100%; height: 50px; padding: 12px 16px; color: #222; border: 1px solid #d4d4d4; border-radius: 0; outline: none; background: #fafafa; font-size: 14.5px; transition: border-color var(--transition), background var(--transition); }
-.contact-form .field textarea { height: 120px; min-height: 120px; resize: vertical; }
-.contact-form .field input:focus, .contact-form .field select:focus, .contact-form .field textarea:focus { border-color: var(--orange); background: #fff; }
-.contact-form .field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, #aaa 50%), linear-gradient(135deg, #aaa 50%, transparent 50%); background-position: calc(100% - 18px) 21px, calc(100% - 14px) 21px; background-size: 4px 4px; background-repeat: no-repeat; }
+.contact-form .field input, .contact-form .field select, .contact-form .field textarea { width: 100% !important; height: 48px !important; padding: 10px 16px !important; color: #111 !important; border: 1px solid #d4d4d4 !important; border-radius: 2px !important; outline: none !important; background: #fafafa !important; font-size: 14px !important; transition: border-color var(--transition), background var(--transition), box-shadow var(--transition) !important; }
+.contact-form .field textarea { height: 130px !important; min-height: 130px !important; resize: vertical !important; }
+.contact-form .field input:focus, .contact-form .field select:focus, .contact-form .field textarea:focus { border-color: var(--orange) !important; background: #fff !important; box-shadow: 0 0 0 3px rgba(249,115,22,.12) !important; }
+.contact-form .field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, #777 50%), linear-gradient(135deg, #777 50%, transparent 50%) !important; background-position: calc(100% - 18px) 21px, calc(100% - 14px) 21px !important; background-size: 5px 5px !important; background-repeat: no-repeat !important; }
+[dir="rtl"] .contact-form .field select { background-position: 18px 21px, 14px 21px !important; }
 .contact-form .field option { color: #111; }
-.contact-form .field.invalid input, .contact-form .field.invalid select, .contact-form .field.invalid textarea { border-color: #ff5e43; }
+.contact-form .field.invalid input, .contact-form .field.invalid select, .contact-form .field.invalid textarea { border-color: #ff5e43 !important; }
 .contact-form .field.invalid .error { display: block; position: absolute; inset-inline-start: 0; inset-block-end: -16px; color: #ff5e43; font-size: 11px; }
 
-.contact-info-cards { display: flex; flex-direction: column; gap: 20px; }
-.contact-info-card { display: flex; align-items: flex-start; gap: 16px; padding: 22px 24px; border: 1px solid #e5e5e5; background: #fff; transition: border-color var(--transition); }
-.contact-info-card:hover { border-color: rgba(249,115,22,.3); }
-.contact-info-card > svg { width: 28px; height: 28px; flex: 0 0 auto; color: var(--orange); stroke-width: 1.5; margin-block-start: 2px; }
-.contact-info-card h3 { margin: 0 0 5px; font-family: var(--font-body); font-size: 14px; font-weight: 650; }
-.contact-info-card p { margin: 0; color: #555; font-size: 13.5px; line-height: 1.6; }
+/* Office Showcase Card (Right Column) */
+.office-showcase-card { padding: 32px 28px; border: 1px solid #e4e4e4; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); display: flex; flex-direction: column; gap: 24px; }
+.office-status-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(34,197,94,.1); border: 1px solid rgba(34,197,94,.25); border-radius: 20px; font-size: 12px; font-weight: 650; color: #15803d; width: fit-content; }
+.status-dot-pulse { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px #22c55e; }
+.office-showcase-card h3 { margin: 0 0 8px; font-family: var(--font-display); font-size: 20px; font-weight: 750; letter-spacing: -.02em; }
+.office-address-block { display: flex; align-items: flex-start; gap: 14px; color: #444; font-size: 14px; line-height: 1.6; }
+.office-address-block svg { width: 22px; height: 22px; color: var(--orange); flex-shrink: 0; margin-top: 2px; }
+.office-hours-block { display: flex; align-items: flex-start; gap: 14px; color: #555; font-size: 13.5px; line-height: 1.55; }
+.office-hours-block svg { width: 22px; height: 22px; color: var(--orange); flex-shrink: 0; margin-top: 2px; }
+.office-map-preview { position: relative; overflow: hidden; border: 1px solid #e0e0e0; height: 180px; border-radius: 2px; }
+.office-map-preview img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.92); }
+.office-map-overlay-btn { position: absolute; inset-inline: 16px; inset-block-end: 16px; z-index: 2; min-height: 40px; font-size: 12px; width: calc(100% - 32px); }
 [dir="rtl"] .service-detail-card:nth-child(even) { direction: ltr; }
 
 /* About page - Intro section */
@@ -833,6 +851,8 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
     .hiring-steps-grid { grid-template-columns: repeat(2, 1fr); }
     .career-jobs-grid { grid-template-columns: 1fr; }
     .cv-drop-grid { grid-template-columns: 1fr; }
+    .contact-hub-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-main-grid { grid-template-columns: 1fr; }
     .back-to-top { width: 44px; height: 44px; }
 }
 
@@ -928,6 +948,9 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
     .hiring-steps-grid { grid-template-columns: 1fr; }
     .career-job-card { padding: 20px; }
     .cv-drop-box { padding: 20px; }
+    .contact-hub-grid { grid-template-columns: 1fr; }
+    .contact-form .form-row-2 { grid-template-columns: 1fr; }
+    .office-showcase-card { padding: 24px 20px; }
 }
 
 @media (max-width: 390px) {
