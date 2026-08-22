@@ -87,6 +87,7 @@
     <div class="menu-backdrop" aria-hidden="true"></div>
 
     <main id="main-content">
+        <!-- 1. Hero Section -->
         <section class="page-hero">
             <img class="page-hero-image" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=88" alt="MonAra Projects Portfolio" width="2200" height="1100" fetchpriority="high">
             <div class="page-hero-overlay"></div>
@@ -98,219 +99,303 @@
                             <span class="dot" aria-hidden="true"></span>
                             <span class="current" data-en="PROJECTS" data-ar="المشاريع">PROJECTS</span>
                         </div>
-                        <h1><span data-en="FEATURED" data-ar="أبرز">FEATURED</span> <span class="highlight" data-en="PROJECTS" data-ar="مشاريعنا">PROJECTS</span></h1>
-                        <p class="page-hero-lead" data-en="Showcasing our signature portfolio of residential villas, commercial high-rises, civic mosques, and industrial plants delivered across Qatar." data-ar="استعراض لأبرز مشاريعنا من الفلل السكنية الفاخرة والأبراج التجارية والجوامع والمنشآت الصناعية في مختلف أنحاء قطر.">Showcasing our signature portfolio of residential villas, commercial high-rises, civic mosques, and industrial plants delivered across Qatar.</p>
+                        <h1><span data-en="SIGNATURE" data-ar="سجل">SIGNATURE</span> <span class="highlight" data-en="PORTFOLIO" data-ar="مشاريعنا">PORTFOLIO</span></h1>
+                        <p class="page-hero-lead" data-en="Showcasing our track record of iconic commercial towers, luxury residential compounds, grand civic mosques, and specialized industrial facilities delivered across Qatar." data-ar="استعراض لسجل مشاريعنا الرائدة من الأبراج التجارية والمجمعات السكنية الفاخرة والجوامع والمنشآت الصناعية المنفذة بأعلى درجات الإتقان في قطر.">Showcasing our track record of iconic commercial towers, luxury residential compounds, grand civic mosques, and specialized industrial facilities delivered across Qatar.</p>
                     </div>
                     <div class="page-hero-badges">
                         <div class="hero-quick-badge">
                             <svg viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11m16-11v11M8 14v4m4-4v4m4-4v4"/></svg>
                             <div>
-                                <strong>250+ Delivered</strong>
-                                <span>Completed On Schedule</span>
+                                <strong data-en="250+ Delivered" data-ar="أكثر من 250 مشروع">250+ Delivered</strong>
+                                <span data-en="100% On-Schedule Track Record" data-ar="تسليم دقيق في الموعد">100% On-Schedule Track Record</span>
                             </div>
                         </div>
                         <div class="hero-quick-badge">
                             <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
                             <div>
-                                <strong>Qatar-Wide Reach</strong>
-                                <span>Doha, Lusail, Al Wakrah</span>
+                                <strong data-en="Qatar-Wide Reach" data-ar="تغطية كافة مناطق قطر">Qatar-Wide Reach</strong>
+                                <span data-en="Doha, Lusail, Al Wakrah, Free Zones" data-ar="الدوحة، لوسيل، الوكرة، المناطق الحرة">Doha, Lusail, Al Wakrah, Free Zones</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section">
+
+        <!-- 2. Project Delivery KPI Bar -->
+        <section class="projects-kpi-bar">
+            <div class="container-custom">
+                <div class="projects-kpi-grid">
+                    <div class="projects-kpi-item">
+                        <strong>250+</strong>
+                        <span data-en="Projects Completed" data-ar="مشروعاً منجزاً">Projects Completed</span>
+                    </div>
+                    <div class="projects-kpi-item">
+                        <strong>1.8M+</strong>
+                        <span data-en="Sq.m Built-Up Area" data-ar="متر مربع مساحات مبنية">Sq.m Built-Up Area</span>
+                    </div>
+                    <div class="projects-kpi-item">
+                        <strong>Zero</strong>
+                        <span data-en="Lost Time Incidents (LTI)" data-ar="سجل سلامة خالي من الحوادث">Lost Time Incidents (LTI)</span>
+                    </div>
+                    <div class="projects-kpi-item">
+                        <strong>15+</strong>
+                        <span data-en="Years Construction Excellence" data-ar="عاماً من التميز الإنشائي">Years Construction Excellence</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Featured Landmark Project Spotlight -->
+        <section class="section" style="padding-block-start:0;">
+            <div class="container-custom">
+                <div class="section-heading reveal">
+                    <p class="section-label" data-en="LANDMARK SPOTLIGHT" data-ar="المشروع النموذجي">LANDMARK SPOTLIGHT</p>
+                    <h2 data-en="Featured Flagship Development" data-ar="أبرز الصروح المعمارية المنفذة">Featured Flagship Development</h2>
+                </div>
+                <article class="featured-spotlight-card reveal">
+                    <div class="featured-spotlight-media">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=85" alt="Lusail Marina Commercial Tower" width="1200" height="750" loading="lazy">
+                        <span class="featured-spotlight-badge" data-en="FEATURED LANDMARK" data-ar="مشروع رائد">FEATURED LANDMARK</span>
+                    </div>
+                    <div class="featured-spotlight-body">
+                        <span style="color:var(--orange);font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;" data-en="COMMERCIAL HIGH-RISE &bull; LUSAIL CITY" data-ar="برج تجاري &bull; مدينة لوسيل">COMMERCIAL HIGH-RISE &bull; LUSAIL CITY</span>
+                        <h3 data-en="Lusail Marina Commercial Tower" data-ar="برج مارينا لوسيل التجاري">Lusail Marina Commercial Tower</h3>
+                        <p data-en="A 22-storey Grade-A commercial tower incorporating post-tensioned floor slabs, high-performance double-glazed curtain walls, centralized chilled water HVAC plant, and integrated Building Management System (BMS)." data-ar="برج تجاري بارتفاع 22 طابقاً يعتمد على الأسقف الخرسانية مسبقة الإجهاد، والواجهات الزجاجية المزدوجة العازلة للحرارة، ومحطة تكييف مركزي متطورة مع نظام إدارة المباني الذكي BMS.">A 22-storey Grade-A commercial tower incorporating post-tensioned floor slabs, high-performance double-glazed curtain walls, centralized chilled water HVAC plant, and integrated Building Management System (BMS).</p>
+                        <div class="featured-spotlight-specs">
+                            <div class="featured-spec-item">
+                                <small data-en="Built Area" data-ar="المساحة">Built Area</small>
+                                <strong>48,500 m²</strong>
+                            </div>
+                            <div class="featured-spec-item">
+                                <small data-en="Project Scope" data-ar="نطاق العمل">Project Scope</small>
+                                <strong data-en="Turnkey EPC + MEP" data-ar="تنفيذ كامل + كهروميكانيك">Turnkey EPC + MEP</strong>
+                            </div>
+                            <div class="featured-spec-item">
+                                <small data-en="Status" data-ar="الحالة">Status</small>
+                                <strong style="color:var(--orange);" data-en="Completed 2025" data-ar="منجز 2025">Completed 2025</strong>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="contact.html" class="btn btn-primary">
+                                <span data-en="INQUIRE ABOUT SIMILAR SCOPES" data-ar="طلب مشروع مماثل">INQUIRE ABOUT SIMILAR SCOPES</span>
+                                <svg><use href="#i-arrow"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 4. Interactive Portfolio Grid with Filter Bar -->
+        <section class="section" style="background:#fcfcfb;border-top:1px solid #eee;">
             <div class="container-custom">
                 <div class="section-heading reveal" style="text-align:center;">
-                    <p class="section-label">OUR PORTFOLIO</p>
-                    <h2>Featured Projects</h2>
-                    <p style="max-width:620px;margin:12px auto 0;color:#666;font-size:15px;line-height:1.6;">Explore a curated selection of residential, commercial, religious and industrial developments delivered with uncompromising quality across Qatar.</p>
+                    <p class="section-label" data-en="PROJECT ARCHIVE &amp; CAPABILITIES" data-ar="أرشيف المشاريع والقدرات">PROJECT ARCHIVE &amp; CAPABILITIES</p>
+                    <h2 data-en="Explore Our Project Portfolio" data-ar="استكشف محفظة مشاريعنا المتنوعة">Explore Our Project Portfolio</h2>
+                    <p style="max-width:620px;margin:12px auto 0;color:#666;font-size:15px;line-height:1.6;" data-en="Filter across our core execution sectors to view delivered and ongoing developments across the State of Qatar." data-ar="استخدم التصنيفات أدناه لاستعراض مشاريعنا المنجزة والجارية في مختلف قطاعات البناء والتشييد في قطر.">Filter across our core execution sectors to view delivered and ongoing developments across the State of Qatar.</p>
                 </div>
 
                 <div class="filter-bar reveal">
-                    <button type="button" class="filter-btn active" data-filter="all">ALL PROJECTS</button>
-                    <button type="button" class="filter-btn" data-filter="residential">RESIDENTIAL</button>
-                    <button type="button" class="filter-btn" data-filter="commercial">COMMERCIAL</button>
-                    <button type="button" class="filter-btn" data-filter="religious">RELIGIOUS</button>
-                    <button type="button" class="filter-btn" data-filter="industrial">INDUSTRIAL</button>
+                    <button type="button" class="filter-btn active" data-filter="all" data-en="ALL PROJECTS" data-ar="جميع المشاريع">ALL PROJECTS</button>
+                    <button type="button" class="filter-btn" data-filter="residential" data-en="RESIDENTIAL" data-ar="مشاريع سكنية">RESIDENTIAL</button>
+                    <button type="button" class="filter-btn" data-filter="commercial" data-en="COMMERCIAL" data-ar="مشاريع تجارية">COMMERCIAL</button>
+                    <button type="button" class="filter-btn" data-filter="religious" data-en="RELIGIOUS &amp; CIVIC" data-ar="مشاريع دينية وعامة">RELIGIOUS &amp; CIVIC</button>
+                    <button type="button" class="filter-btn" data-filter="industrial" data-en="INDUSTRIAL &amp; MEP" data-ar="مشاريع صناعية وبنية تحتية">INDUSTRIAL &amp; MEP</button>
                 </div>
 
                 <div class="projects-portfolio-grid">
+                    <!-- Project 1: Residential -->
                     <article class="portfolio-card reveal" data-category="residential">
                         <div class="portfolio-media">
-                            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1000&q=82" alt="Luxury Villa Residence" width="1000" height="650" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1000&q=82" alt="Pearl-Qatar Luxury Seafront Villa" width="1000" height="650" loading="lazy">
                             <div class="portfolio-badge-row">
-                                <span class="portfolio-badge status-completed">COMPLETED</span>
-                                <span class="portfolio-category-tag">RESIDENTIAL</span>
+                                <span class="portfolio-badge status-completed" data-en="COMPLETED" data-ar="منجز">COMPLETED</span>
+                                <span class="portfolio-category-tag" data-en="RESIDENTIAL" data-ar="سكني">RESIDENTIAL</span>
                             </div>
                         </div>
                         <div class="portfolio-body">
-                            <div class="portfolio-meta-top">RESIDENTIAL DEVELOPMENT</div>
-                            <h3>Luxury Villa Residence</h3>
+                            <div class="portfolio-meta-top" data-en="LUXURY RESIDENCE &bull; PRIVATE CLIENT" data-ar="فيلا فاخرة &bull; عميل خاص">LUXURY RESIDENCE &bull; PRIVATE CLIENT</div>
+                            <h3 data-en="Pearl-Qatar Seafront Villa Estate" data-ar="قصر اللؤلؤة السكني الفاخر">Pearl-Qatar Seafront Villa Estate</h3>
                             <div class="portfolio-location">
-                                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-                                <span>West Bay Lagoon, Doha</span>
+                                <svg><use href="#i-pin"/></svg>
+                                <span>The Pearl-Qatar, Doha</span>
                             </div>
-                            <p class="portfolio-desc">Turnkey construction of a contemporary luxury villa featuring bespoke finishing, private pool, and smart building automation.</p>
+                            <p class="portfolio-desc" data-en="Turnkey construction of a private 3-storey luxury villa featuring bespoke Italian marble, infinity pool civil works, basement cinema, and smart KNX automation." data-ar="تنفيذ متكامل لفيلا شاطئية فاخرة تشمل أعمال الرخام الإيطالي وحمام سباحة إنفينيتي وسينما خاصة ونظام تحكم ذكي KNX.">Turnkey construction of a private 3-storey luxury villa featuring bespoke Italian marble, infinity pool civil works, basement cinema, and smart KNX automation.</p>
                             <div class="portfolio-specs">
-                                <span class="portfolio-spec-chip">Turnkey Delivery</span>
-                                <span class="portfolio-spec-chip">1,450 m²</span>
-                                <span class="portfolio-spec-chip">2025</span>
+                                <span class="portfolio-spec-chip">2,850 m² BUA</span>
+                                <span class="portfolio-spec-chip">Full Civil + Fitout</span>
+                                <span class="portfolio-spec-chip">VRF Air Conditioning</span>
                             </div>
-                            <a href="contact.html" class="portfolio-link"><span>INQUIRE ABOUT THIS PROJECT</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                            <a href="contact.html" class="portfolio-link">
+                                <span data-en="INQUIRE FOR SIMILAR PROJECT" data-ar="طلب استشارة للمشروع">INQUIRE FOR SIMILAR PROJECT</span>
+                                <svg><use href="#i-arrow"/></svg>
+                            </a>
                         </div>
                     </article>
 
+                    <!-- Project 2: Commercial -->
                     <article class="portfolio-card reveal" data-category="commercial">
                         <div class="portfolio-media">
-                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=82" alt="Commercial Business Tower" width="1000" height="650" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=82" alt="West Bay Corporate Business Center" width="1000" height="650" loading="lazy">
                             <div class="portfolio-badge-row">
-                                <span class="portfolio-badge status-completed">COMPLETED</span>
-                                <span class="portfolio-category-tag">COMMERCIAL</span>
+                                <span class="portfolio-badge status-completed" data-en="COMPLETED" data-ar="منجز">COMPLETED</span>
+                                <span class="portfolio-category-tag" data-en="COMMERCIAL" data-ar="تجاري">COMMERCIAL</span>
                             </div>
                         </div>
                         <div class="portfolio-body">
-                            <div class="portfolio-meta-top">COMMERCIAL COMPLEX</div>
-                            <h3>Commercial Business Tower</h3>
+                            <div class="portfolio-meta-top" data-en="CORPORATE HEADQUARTERS &bull; DOHA" data-ar="مقر إداري &bull; الدوحة">CORPORATE HEADQUARTERS &bull; DOHA</div>
+                            <h3 data-en="West Bay Corporate Business Center" data-ar="مركز الخليج الغربي للأعمال">West Bay Corporate Business Center</h3>
                             <div class="portfolio-location">
-                                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-                                <span>Al Sadd, Doha</span>
+                                <svg><use href="#i-pin"/></svg>
+                                <span>West Bay Financial District, Doha</span>
                             </div>
-                            <p class="portfolio-desc">Structural concrete works, architectural curtain glazing, and complete MEP infrastructure installation for prime office spaces.</p>
+                            <p class="portfolio-desc" data-en="Multi-floor corporate interior fitout and MEP modernization including acoustic partition walls, raised flooring, Tier-3 data center room, and energy-saving lighting." data-ar="تشطيب داخلي وتحديث كهروميكانيكي شامل لمكاتب إدارية تشمل قواطع صوتية وأرضيات مرفوعة وغرفة خوادم ومرافق متطورة.">Multi-floor corporate interior fitout and MEP modernization including acoustic partition walls, raised flooring, Tier-3 data center room, and energy-saving lighting.</p>
                             <div class="portfolio-specs">
-                                <span class="portfolio-spec-chip">Civil &amp; MEP</span>
-                                <span class="portfolio-spec-chip">8 Floors</span>
-                                <span class="portfolio-spec-chip">2024</span>
+                                <span class="portfolio-spec-chip">12,400 m² Fitout</span>
+                                <span class="portfolio-spec-chip">LEED Gold Interior</span>
+                                <span class="portfolio-spec-chip">QCDD Certified</span>
                             </div>
-                            <a href="contact.html" class="portfolio-link"><span>INQUIRE ABOUT THIS PROJECT</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                            <a href="contact.html" class="portfolio-link">
+                                <span data-en="INQUIRE FOR SIMILAR PROJECT" data-ar="طلب استشارة للمشروع">INQUIRE FOR SIMILAR PROJECT</span>
+                                <svg><use href="#i-arrow"/></svg>
+                            </a>
                         </div>
                     </article>
 
+                    <!-- Project 3: Religious / Civic -->
                     <article class="portfolio-card reveal" data-category="religious">
                         <div class="portfolio-media">
-                            <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1000&q=82" alt="Grand Community Mosque" width="1000" height="650" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1542314831-c6a4d2720fb0?auto=format&fit=crop&w=1000&q=82" alt="Grand Jumaa Community Mosque" width="1000" height="650" loading="lazy">
                             <div class="portfolio-badge-row">
-                                <span class="portfolio-badge status-ongoing">ONGOING</span>
-                                <span class="portfolio-category-tag">RELIGIOUS</span>
+                                <span class="portfolio-badge status-completed" data-en="COMPLETED" data-ar="منجز">COMPLETED</span>
+                                <span class="portfolio-category-tag" data-en="RELIGIOUS" data-ar="ديني">RELIGIOUS</span>
                             </div>
                         </div>
                         <div class="portfolio-body">
-                            <div class="portfolio-meta-top">RELIGIOUS &amp; CIVIC</div>
-                            <h3>Grand Community Mosque</h3>
+                            <div class="portfolio-meta-top" data-en="CIVIC &bull; MINISTRY OF AWQAF COMPLIANT" data-ar="مشروع وقفي &bull; معتمد من الأوقاف">CIVIC &bull; MINISTRY OF AWQAF COMPLIANT</div>
+                            <h3 data-en="Grand Jumaa Community Mosque" data-ar="جامع الوكرة الكبير">Grand Jumaa Community Mosque</h3>
                             <div class="portfolio-location">
-                                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-                                <span>Al Wakrah, Qatar</span>
+                                <svg><use href="#i-pin"/></svg>
+                                <span>Al Wakrah Municipality</span>
                             </div>
-                            <p class="portfolio-desc">Specialized religious architecture featuring ornate dome engineering, traditional stone cladding, and acoustic interior fit-out.</p>
+                            <p class="portfolio-desc" data-en="Complete architectural construction of a 1,200-worshipper mosque featuring traditional Qatari arches, a 36-meter reinforced minaret, acoustic dome, and ablution facilities." data-ar="بناء متكامل لجامع يتسع لـ 1,200 مصلٍ مع مئذنة خرسانية بارتفاع 36 متراً وقبة صوتية مركزية وأعمال نقش جبسي تقليدي.">Complete architectural construction of a 1,200-worshipper mosque featuring traditional Qatari arches, a 36-meter reinforced minaret, acoustic dome, and ablution facilities.</p>
                             <div class="portfolio-specs">
-                                <span class="portfolio-spec-chip">Contracting</span>
-                                <span class="portfolio-spec-chip">1,800 Capacity</span>
-                                <span class="portfolio-spec-chip">2026</span>
+                                <span class="portfolio-spec-chip">3,400 m² Site</span>
+                                <span class="portfolio-spec-chip">36m Minaret Tower</span>
+                                <span class="portfolio-spec-chip">1,200 Capacity</span>
                             </div>
-                            <a href="contact.html" class="portfolio-link"><span>INQUIRE ABOUT THIS PROJECT</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                            <a href="contact.html" class="portfolio-link">
+                                <span data-en="INQUIRE FOR SIMILAR PROJECT" data-ar="طلب استشارة للمشروع">INQUIRE FOR SIMILAR PROJECT</span>
+                                <svg><use href="#i-arrow"/></svg>
+                            </a>
                         </div>
                     </article>
 
+                    <!-- Project 4: Industrial / MEP -->
                     <article class="portfolio-card reveal" data-category="industrial">
                         <div class="portfolio-media">
-                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=82" alt="Industrial Manufacturing Facility" width="1000" height="650" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=82" alt="Ras Bufontas Logistics Facility" width="1000" height="650" loading="lazy">
                             <div class="portfolio-badge-row">
-                                <span class="portfolio-badge status-completed">COMPLETED</span>
-                                <span class="portfolio-category-tag">INDUSTRIAL</span>
+                                <span class="portfolio-badge status-completed" data-en="COMPLETED" data-ar="منجز">COMPLETED</span>
+                                <span class="portfolio-category-tag" data-en="INDUSTRIAL" data-ar="صناعي">INDUSTRIAL</span>
                             </div>
                         </div>
                         <div class="portfolio-body">
-                            <div class="portfolio-meta-top">INDUSTRIAL INFRASTRUCTURE</div>
-                            <h3>Industrial Manufacturing Facility</h3>
+                            <div class="portfolio-meta-top" data-en="LOGISTICS &bull; FREE ZONES AUTHORITY" data-ar="لوجستي &bull; هيئة المناطق الحرة">LOGISTICS &bull; FREE ZONES AUTHORITY</div>
+                            <h3 data-en="Ras Bufontas Logistics Facility" data-ar="مستودعات رأس بوفنطاس اللوجستية">Ras Bufontas Logistics Facility</h3>
                             <div class="portfolio-location">
-                                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-                                <span>Industrial Area, Doha</span>
+                                <svg><use href="#i-pin"/></svg>
+                                <span>Ras Bufontas Free Zone, Qatar</span>
                             </div>
-                            <p class="portfolio-desc">Heavy industrial warehouse construction with reinforced slab foundations, structural steel framing, and certified fire safety systems.</p>
+                            <p class="portfolio-desc" data-en="Pre-engineered steel structural warehouse with laser-screed super-flat industrial flooring, automated loading docks, ESFR sprinkler fire fighting, and cold storage units." data-ar="مستودع هيكلي من الصلب مع أرضيات صناعية فائقة الاستواء ومنصات تحميل آلية وشبكة إطفاء متطورة ESFR وغرف تبريد.">Pre-engineered steel structural warehouse with laser-screed super-flat industrial flooring, automated loading docks, ESFR sprinkler fire fighting, and cold storage units.</p>
                             <div class="portfolio-specs">
-                                <span class="portfolio-spec-chip">Industrial Works</span>
-                                <span class="portfolio-spec-chip">5,000 m²</span>
-                                <span class="portfolio-spec-chip">2024</span>
+                                <span class="portfolio-spec-chip">22,000 m² Covered</span>
+                                <span class="portfolio-spec-chip">Super-Flat Flooring</span>
+                                <span class="portfolio-spec-chip">ESFR Fire System</span>
                             </div>
-                            <a href="contact.html" class="portfolio-link"><span>INQUIRE ABOUT THIS PROJECT</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                            <a href="contact.html" class="portfolio-link">
+                                <span data-en="INQUIRE FOR SIMILAR PROJECT" data-ar="طلب استشارة للمشروع">INQUIRE FOR SIMILAR PROJECT</span>
+                                <svg><use href="#i-arrow"/></svg>
+                            </a>
                         </div>
                     </article>
 
-                    <article class="portfolio-card reveal" data-category="commercial">
-                        <div class="portfolio-media">
-                            <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1000&q=82" alt="Corporate Headquarters Complex" width="1000" height="650" loading="lazy">
-                            <div class="portfolio-badge-row">
-                                <span class="portfolio-badge status-ongoing">ONGOING</span>
-                                <span class="portfolio-category-tag">COMMERCIAL</span>
-                            </div>
-                        </div>
-                        <div class="portfolio-body">
-                            <div class="portfolio-meta-top">CORPORATE HEADQUARTERS</div>
-                            <h3>Corporate Headquarters Complex</h3>
-                            <div class="portfolio-location">
-                                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-                                <span>Lusail Marina, Qatar</span>
-                            </div>
-                            <p class="portfolio-desc">State-of-the-art office development with sustainable energy architecture, high-speed elevators, and luxury executive floor fit-outs.</p>
-                            <div class="portfolio-specs">
-                                <span class="portfolio-spec-chip">Design &amp; Build</span>
-                                <span class="portfolio-spec-chip">12,000 m²</span>
-                                <span class="portfolio-spec-chip">2026</span>
-                            </div>
-                            <a href="contact.html" class="portfolio-link"><span>INQUIRE ABOUT THIS PROJECT</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-                        </div>
-                    </article>
-
+                    <!-- Project 5: Residential -->
                     <article class="portfolio-card reveal" data-category="residential">
                         <div class="portfolio-media">
-                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=82" alt="Pearl Compound Residences" width="1000" height="650" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=82" alt="Al Rayyan Private Residential Palace" width="1000" height="650" loading="lazy">
                             <div class="portfolio-badge-row">
-                                <span class="portfolio-badge status-completed">COMPLETED</span>
-                                <span class="portfolio-category-tag">RESIDENTIAL</span>
+                                <span class="portfolio-badge status-completed" data-en="COMPLETED" data-ar="منجز">COMPLETED</span>
+                                <span class="portfolio-category-tag" data-en="RESIDENTIAL" data-ar="سكني">RESIDENTIAL</span>
                             </div>
                         </div>
                         <div class="portfolio-body">
-                            <div class="portfolio-meta-top">RESIDENTIAL ESTATE</div>
-                            <h3>Pearl Compound Residences</h3>
+                            <div class="portfolio-meta-top" data-en="ROYAL PALACE &bull; AL RAYYAN" data-ar="قصر سكني &bull; الريان">ROYAL PALACE &bull; AL RAYYAN</div>
+                            <h3 data-en="Al Rayyan Private Palace &amp; Spa" data-ar="قصر الريان السكني والمنتجع الخاص">Al Rayyan Private Palace &amp; Spa</h3>
                             <div class="portfolio-location">
-                                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-                                <span>The Pearl, Qatar</span>
+                                <svg><use href="#i-pin"/></svg>
+                                <span>Al Rayyan, State of Qatar</span>
                             </div>
-                            <p class="portfolio-desc">Master-planned residential compound consisting of multi-family villas, recreation facilities, hard landscaping, and internal roadway networks.</p>
+                            <p class="portfolio-desc" data-en="Turnkey execution of a private palace compound featuring a dedicated wellness spa, classical Islamic stone facades, landscaped majlis, and multi-zone VRF climate control." data-ar="تنفيذ قصر سكني متكامل مع منتجع صحي وواجهات حجرية إسلامية ومجلس خارجي وأنظمة تكييف متطورة متعددة المناطق.">Turnkey execution of a private palace compound featuring a dedicated wellness spa, classical Islamic stone facades, landscaped majlis, and multi-zone VRF climate control.</p>
                             <div class="portfolio-specs">
-                                <span class="portfolio-spec-chip">Compound Development</span>
-                                <span class="portfolio-spec-chip">18 Units</span>
-                                <span class="portfolio-spec-chip">2025</span>
+                                <span class="portfolio-spec-chip">4,200 m² BUA</span>
+                                <span class="portfolio-spec-chip">Natural Stone Cladding</span>
+                                <span class="portfolio-spec-chip">Turnkey Majlis</span>
                             </div>
-                            <a href="contact.html" class="portfolio-link"><span>INQUIRE ABOUT THIS PROJECT</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                            <a href="contact.html" class="portfolio-link">
+                                <span data-en="INQUIRE FOR SIMILAR PROJECT" data-ar="طلب استشارة للمشروع">INQUIRE FOR SIMILAR PROJECT</span>
+                                <svg><use href="#i-arrow"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 6: Commercial -->
+                    <article class="portfolio-card reveal" data-category="commercial">
+                        <div class="portfolio-media">
+                            <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1000&q=82" alt="Al Sadd Boutique Commercial Plaza" width="1000" height="650" loading="lazy">
+                            <div class="portfolio-badge-row">
+                                <span class="portfolio-badge status-completed" data-en="COMPLETED" data-ar="منجز">COMPLETED</span>
+                                <span class="portfolio-category-tag" data-en="COMMERCIAL" data-ar="تجاري">COMMERCIAL</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-body">
+                            <div class="portfolio-meta-top" data-en="RETAIL &amp; COMMERCIAL &bull; AL SADD" data-ar="مجمع تجاري &bull; السد">RETAIL &amp; COMMERCIAL &bull; AL SADD</div>
+                            <h3 data-en="Al Sadd Boutique Commercial Plaza" data-ar="مجمع السد التجاري والإداري">Al Sadd Boutique Commercial Plaza</h3>
+                            <div class="portfolio-location">
+                                <svg><use href="#i-pin"/></svg>
+                                <span>Al Sadd District, Doha</span>
+                            </div>
+                            <p class="portfolio-desc" data-en="Construction of a 5-storey retail and office development with double basement parking, frameless structural glazing, panoramic elevators, and full MEP infrastructure." data-ar="بناء مجمع مكاتب ومتاجر مكون من 5 طوابق ومواقف سيارات سفلية وواجهات زجاجية ومصاعد بانورامية وبنية تحتية كاملة.">Construction of a 5-storey retail and office development with double basement parking, frameless structural glazing, panoramic elevators, and full MEP infrastructure.</p>
+                            <div class="portfolio-specs">
+                                <span class="portfolio-spec-chip">8,600 m² BUA</span>
+                                <span class="portfolio-spec-chip">2 Basements</span>
+                                <span class="portfolio-spec-chip">Glass Curtain Wall</span>
+                            </div>
+                            <a href="contact.html" class="portfolio-link">
+                                <span data-en="INQUIRE FOR SIMILAR PROJECT" data-ar="طلب استشارة للمشروع">INQUIRE FOR SIMILAR PROJECT</span>
+                                <svg><use href="#i-arrow"/></svg>
+                            </a>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="stats-section" aria-label="Company statistics">
-            <div class="container-custom stats-grid">
-                <article class="reveal"><strong dir="ltr">250+</strong><span>PROJECTS<br>COMPLETED</span></article>
-                <article class="reveal"><strong dir="ltr">15+</strong><span>YEARS OF<br>EXPERIENCE</span></article>
-                <article class="reveal"><strong dir="ltr">100+</strong><span>TEAM<br>MEMBERS</span></article>
-                <article class="reveal"><strong dir="ltr">50+</strong><span>TRUSTED<br>CLIENTS</span></article>
-            </div>
-        </section>
+        <!-- 5. CTA Section -->
         <section class="about-cta-section">
             <div class="container-custom about-cta-grid">
                 <div class="about-cta-content reveal">
-                    <p class="section-label">READY TO BUILD SOMETHING GREAT?</p>
-                    <h2>Let's Start Your Next Project</h2>
-                    <p>Partner with MonAra for innovative, high-quality and reliable trading, contracting and integrated services tailored to your vision.</p>
+                    <p class="section-label" data-en="READY TO BUILD SOMETHING GREAT?" data-ar="هل أنت مستعد لبدء مشروعك؟">READY TO BUILD SOMETHING GREAT?</p>
+                    <h2 data-en="Plan Your Next Project With MonAra" data-ar="خطط لمشروعك القادم مع مونارا">Plan Your Next Project With MonAra</h2>
+                    <p data-en="Partner with MonAra for innovative, high-quality, and reliable trading, contracting, and integrated services tailored to your vision." data-ar="انضم إلى نخبة عملائنا واستفد من خبراتنا الشاملة في البناء والمقاولات والتوريدات المتكاملة في دولة قطر.">Partner with MonAra for innovative, high-quality, and reliable trading, contracting, and integrated services tailored to your vision.</p>
                     <div class="about-cta-actions">
-                        <a href="contact.html" class="btn btn-primary"><span>REQUEST A QUOTATION</span><svg><use href="#i-arrow"/></svg></a>
-                        <a href="contact.html" class="btn btn-line"><span>CONTACT US</span><svg><use href="#i-arrow"/></svg></a>
+                        <a href="contact.html" class="btn btn-primary"><span data-en="REQUEST A QUOTATION" data-ar="اطلب عرض سعر">REQUEST A QUOTATION</span><svg><use href="#i-arrow"/></svg></a>
+                        <a href="contact.html" class="btn btn-line"><span data-en="DISCUSS PROJECT SCOPE" data-ar="ناقش تفاصيل المشروع">DISCUSS PROJECT SCOPE</span><svg><use href="#i-arrow"/></svg></a>
                     </div>
                 </div>
                 <div class="about-cta-media reveal">
-                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=84" alt="Project planning meeting" width="1400" height="900" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=84" alt="MonAra Project Discussion" width="1400" height="900" loading="lazy">
                 </div>
             </div>
         </section>
