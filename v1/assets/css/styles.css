@@ -263,7 +263,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 /* Modern Unified Page Hero (About, Services, Projects, Clients, Careers, Contact) */
 .page-hero, .about-hero {
     position: relative;
-    min-height: clamp(380px, 50vh, 520px);
+    min-height: auto;
     display: flex;
     align-items: center;
     isolation: isolate;
@@ -1037,14 +1037,18 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
     .about-intro-values { grid-template-columns: 1fr; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .stats-grid article:nth-child(2) { border-inline-end: 0; }
+    .projects-kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .projects-kpi-item:nth-child(2) { border-inline-end: 0; }
     .values-grid { grid-template-columns: 1fr; }
     .about-cta-actions { flex-direction: column; }
     .about-cta-media img { height: 260px; }
     .testimonials-grid { grid-template-columns: 1fr; }
     .jobs-grid { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; }
-    .page-hero-layout { flex-direction: column; align-items: flex-start; gap: 28px; }
-    .page-hero-badges { width: 100%; max-width: 480px; }
+    .page-hero, .about-hero { align-items: flex-start; min-height: 0; height: auto; }
+    .page-hero-layout { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .page-hero-content, .about-hero-content { padding-block: 20px 18px; }
+    .page-hero-badges { display: none; }
     .career-culture-grid { grid-template-columns: 1fr; }
     .evp-grid { grid-template-columns: repeat(2, 1fr); }
     .hiring-steps-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1125,8 +1129,6 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
     .footer-bottom .container-custom { align-items: flex-start; flex-direction: column; justify-content: center; padding-block: 18px; }
     .footer-bottom p, .footer-bottom a { font-size: 12.5px; }
     .footer-bottom div div { gap: 16px; }
-    .page-hero, .about-hero { min-height: clamp(340px, 50vh, 440px); }
-    .page-hero h1, .about-hero h1 { font-size: clamp(32px, 8vw, 42px); }
     .about-intro-img-grid img { height: 200px; }
     .about-intro-img-grid img:first-child { height: 240px; }
     .vm-card { padding: 24px; }
@@ -1134,13 +1136,17 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
     .vm-card p { font-size: 14px; }
     .stats-grid { gap: 16px; }
     .stats-grid strong { font-size: 32px; }
+    .projects-kpi-grid { grid-template-columns: 1fr; gap: 16px; }
+    .projects-kpi-item { border-inline-end: 0 !important; border-block-end: 1px solid rgba(255,255,255,.1); padding-block: 12px; }
+    .projects-kpi-item:last-child { border-block-end: 0; }
     .timeline { padding-inline-start: 32px; }
     .timeline-marker { width: 24px; height: 24px; inset-inline-start: -32px; }
     .timeline-marker::after { width: 8px; height: 8px; }
     .timeline::before { inset-inline-start: 11px; }
     .about-cta-content h2 { font-size: 26px; }
-    .page-hero, .about-hero { min-height: clamp(300px, 50vh, 400px); }
-    .page-hero h1, .about-hero h1 { font-size: clamp(30px, 7vw, 38px); }
+    .page-hero, .about-hero { min-height: 0; height: auto; }
+    .page-hero h1, .about-hero h1 { font-size: clamp(26px, 6vw, 34px); margin-bottom: 8px; }
+    .page-hero-content, .about-hero-content { padding-block: 18px 16px; }
     .service-detail-body { padding: 22px; }
     .testimonial-card { padding: 20px; }
     .job-card { flex-direction: column; padding: 22px; }
