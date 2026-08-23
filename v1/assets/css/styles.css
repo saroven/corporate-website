@@ -996,7 +996,7 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
     .brand-copy b { font-size: 24px; }
     .brand-copy small { font-size: 5.9px; }
     .section { padding-block: 64px; }
-    .hero { min-height: clamp(600px, 80vh, 720px); }
+    .hero { min-height: min(72svh, 560px); }
     .hero-image { object-position: 64% center; }
     .hero-overlay { background: linear-gradient(90deg, rgba(7,9,11,.94), rgba(7,9,11,.63) 70%, rgba(7,9,11,.38)), linear-gradient(0deg, rgba(0,0,0,.72), transparent); }
     [dir="rtl"] .hero-overlay { background: linear-gradient(270deg, rgba(7,9,11,.94), rgba(7,9,11,.63) 70%, rgba(7,9,11,.38)), linear-gradient(0deg, rgba(0,0,0,.72), transparent); }
@@ -1047,6 +1047,7 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
     .contact-grid { grid-template-columns: 1fr; }
     .page-hero, .about-hero { align-items: flex-start; min-height: 0; height: auto; }
     .page-hero-layout { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .page-hero-layout > div:first-child { flex: 0 0 auto; }
     .page-hero-content, .about-hero-content { padding-block: 20px 18px; }
     .page-hero-badges { display: none; }
     .career-culture-grid { grid-template-columns: 1fr; }
@@ -1069,7 +1070,7 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
     .topbar-contact a:nth-child(2) span { display: none; }
     .topbar-contact a:nth-child(2) { margin-inline-start: 2px; }
     .language-switcher { gap: 8px; }
-    .hero { min-height: clamp(620px, 85vh, 740px); }
+    .hero { min-height: min(78svh, 520px); }
     .hero-image { object-position: 68% center; }
     .hero-content { padding-block: 56px 48px; }
     .hero h1 { font-size: clamp(42px, 11.5vw, 50px); line-height: .96; letter-spacing: -.04em; }
@@ -1182,3 +1183,4 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
     *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     .reveal { opacity: 1; transform: none; }
 }
+
