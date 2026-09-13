@@ -130,16 +130,16 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 /* Services */
 .services-section { padding-block-start: 28px; background: #fff; }
 .section-heading { margin-block-end: 24px; }
-.services-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 22px; }
+.services-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .service-card { min-width: 0; border: 1px solid #e4e4e4; background: #fff; box-shadow: 0 3px 12px rgba(0,0,0,.04); transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition); }
 .service-card:hover { transform: translateY(-6px); border-color: rgba(249,115,22,.35); box-shadow: var(--shadow); }
-.card-media { position: relative; height: 185px; overflow: hidden; background: #ddd; }
+.card-media { position: relative; height: 230px; overflow: hidden; background: #ddd; }
 .card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .65s ease; }
 .service-card:hover .card-media img { transform: scale(1.045); }
 .card-number { position: absolute; inset-inline-start: 0; inset-block-start: 0; min-width: 52px; height: 37px; display: grid; place-items: center; color: #fff; background: var(--orange); font-size: 14px; font-weight: 680; letter-spacing: -.015em; }
 .card-icon { position: absolute; inset-inline-start: 12px; inset-block-end: 0; width: 48px; height: 48px; display: grid; place-items: center; color: #fff; background: rgba(10,10,10,.9); }
 .card-icon svg { width: 27px; height: 27px; }
-.card-body { min-height: 215px; display: flex; flex-direction: column; padding: 22px 20px 20px; }
+.card-body { display: flex; flex-direction: column; padding: 22px 20px 20px; }
 .card-body h3 { margin: 0 0 11px; font-family: var(--font-display); font-size: 17px; line-height: 1.25; font-weight: 680; letter-spacing: -.022em; }
 .card-body p { margin: 0 0 22px; color: #555; font-size: 14px; line-height: 1.58; font-weight: 400; }
 .card-body a { display: inline-flex; align-items: center; gap: 10px; margin-block-start: auto; color: var(--orange); font-size: 11.5px; font-weight: 650; letter-spacing: .025em; }
@@ -262,6 +262,8 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .services-grid .reveal:nth-child(4), .projects-grid .reveal:nth-child(4), .benefits-grid .reveal:nth-child(4) { transition-delay: .18s; }
 .services-grid .reveal:nth-child(5), .benefits-grid .reveal:nth-child(5) { transition-delay: .24s; }
 .services-grid .reveal:nth-child(6), .benefits-grid .reveal:nth-child(6) { transition-delay: .3s; }
+@keyframes filter-enter { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.filter-enter { animation: filter-enter .45s ease both; }
 
 /* Modern Unified Page Hero (About, Services, Projects, Clients, Careers, Contact) */
 .page-hero, .about-hero {
@@ -923,10 +925,7 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
     white-space: nowrap;
 }
 
-@media (max-width: 1535px) {
-    .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-    .card-media { height: 230px; }
-}
+/* Wide viewports use the 3-column services base grid above; no override needed. */
 
 @media (max-width: 1280px) {
     .desktop-nav a { padding-inline: 7px; font-size: 12.25px; }
@@ -935,7 +934,6 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
     .header-cta { padding-inline: 16px !important; }
     .services-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .card-media { height: 225px; }
-    .card-body { min-height: 205px; }
     .why-layout { grid-template-columns: 145px minmax(0, 1fr) 225px; gap: 15px; }
     .benefits-grid article { padding-inline: 10px; }
 }
@@ -1012,7 +1010,7 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
     .hero-actions .btn { padding-inline: 19px; font-size: 12.5px; }
     .trust-grid { grid-template-columns: repeat(2, 1fr); }
     .trust-grid article { justify-content: flex-start; min-height: 80px; padding-inline: 18px; border-bottom: 1px solid rgba(255,255,255,.08); }
-    .trust-grid article:last-child { grid-column: 1 / -1; }
+    .trust-grid article:last-child { grid-column: 1 / -1; grid-template-columns: auto auto; justify-content: center; }
     .trust-grid svg { width: 36px; height: 36px; }
     .about-grid { grid-template-columns: 1fr; }
     .about-media, .about-media > img { min-height: 0; height: 460px; }
@@ -1101,7 +1099,7 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
     .services-grid { gap: 20px; }
     .service-card { display: flex; flex-direction: column; }
     .card-media { height: auto; aspect-ratio: 16 / 10; }
-    .card-body { min-height: 205px; padding: 21px 20px 20px; }
+    .card-body { padding: 21px 20px 20px; }
     .card-body h3 { font-size: 18px; }
     .card-body p { font-size: 14px; line-height: 1.62; }
     .card-body a { font-size: 13px; }

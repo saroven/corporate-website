@@ -650,7 +650,14 @@
             items.forEach((item) => {
                 const category = item.dataset.category;
                 const match = target === 'all' || category === target;
-                item.style.display = match ? '' : 'none';
+                item.classList.remove('filter-enter');
+                if (match) {
+                    item.style.display = '';
+                    void item.offsetWidth;
+                    item.classList.add('filter-enter');
+                } else {
+                    item.style.display = 'none';
+                }
             });
         });
     });
