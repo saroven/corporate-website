@@ -429,12 +429,28 @@
         menu.setAttribute('aria-hidden', String(!isOpen));
         menuToggle.setAttribute('aria-expanded', String(isOpen));
         if (isOpen) menuClose.focus();
+        else if (menu.contains(document.activeElement)) menuToggle.focus({ preventScroll: true });
     };
 
     menuToggle.addEventListener('click', () => setMenu(true));
     menuClose.addEventListener('click', () => setMenu(false));
     menuBackdrop.addEventListener('click', () => setMenu(false));
     menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
+    menu.addEventListener('keydown', (event) => {
+        if (event.key !== 'Tab' || !menu.classList.contains('open')) return;
+        const focusable = [...menu.querySelectorAll('a[href], button:not([disabled])')]
+            .filter((element) => element.getClientRects().length > 0);
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+        }
+    });
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape' && menu.classList.contains('open')) setMenu(false);
     });
@@ -620,10 +636,15 @@
 
     // Category Filter Buttons (Projects, Services, Careers)
     const filterButtons = document.querySelectorAll('.filter-btn');
+    const syncFilterPressed = () => {
+        filterButtons.forEach((b) => b.setAttribute('aria-pressed', String(b.classList.contains('active'))));
+    };
+    syncFilterPressed();
     filterButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
             filterButtons.forEach((b) => b.classList.remove('active'));
             btn.classList.add('active');
+            syncFilterPressed();
             const target = btn.dataset.filter || btn.dataset.category;
             const items = document.querySelectorAll('[data-category]');
             items.forEach((item) => {
@@ -634,13 +655,28 @@
         });
     });
 
-    // FAQ Accordion
-    document.querySelectorAll('.faq-question').forEach((button) => {
+    // FAQ Accordion (ARIA-wired; applies to any page using .faq-item markup)
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach((item, index) => {
+        const button = item.querySelector('.faq-question');
+        const panel = item.querySelector('.faq-answer');
+        if (!button || !panel) return;
+        const buttonId = `faq-button-${index}`;
+        const panelId = `faq-panel-${index}`;
+        button.id = buttonId;
+        panel.id = panelId;
+        button.setAttribute('aria-controls', panelId);
+        button.setAttribute('aria-expanded', String(item.classList.contains('active')));
+        panel.setAttribute('role', 'region');
+        panel.setAttribute('aria-labelledby', buttonId);
         button.addEventListener('click', () => {
-            const item = button.closest('.faq-item');
             const isActive = item.classList.contains('active');
-            document.querySelectorAll('.faq-item').forEach((i) => i.classList.remove('active'));
-            if (!isActive) item.classList.add('active');
+            faqItems.forEach((i) => i.classList.remove('active'));
+            document.querySelectorAll('.faq-question').forEach((b) => b.setAttribute('aria-expanded', 'false'));
+            if (!isActive) {
+                item.classList.add('active');
+                button.setAttribute('aria-expanded', 'true');
+            }
         });
     });
 

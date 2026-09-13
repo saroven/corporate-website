@@ -948,9 +948,9 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
 @media (max-width: 1060px) {
     .desktop-nav, .header-cta { display: none; }
     .menu-toggle { width: 44px; height: 44px; display: grid; place-items: center; margin-inline-start: auto; }
-    .mobile-menu { position: fixed; inset-block: 0; inset-inline-end: 0; z-index: 1300; width: min(88vw, 390px); display: flex; flex-direction: column; gap: 0; padding: 92px 35px 35px; color: #fff; background: #121212; box-shadow: -20px 0 60px rgba(0,0,0,.32); transform: translateX(105%); transition: transform .35s ease; }
+    .mobile-menu { position: fixed; inset-block: 0; inset-inline-end: 0; z-index: 1300; width: min(88vw, 390px); display: flex; flex-direction: column; gap: 0; padding: 92px 35px 35px; color: #fff; background: #121212; box-shadow: -20px 0 60px rgba(0,0,0,.32); transform: translateX(105%); visibility: hidden; transition: transform .35s ease, visibility 0s linear .35s; }
     [dir="rtl"] .mobile-menu { transform: translateX(-105%); }
-    .mobile-menu.open { transform: none; }
+    .mobile-menu.open { transform: none; visibility: visible; transition: transform .35s ease; }
     .mobile-menu > a:not(.btn) { min-height: 56px; display: flex; align-items: center; padding: 12px 2px; border-bottom: 1px solid rgba(255,255,255,.1); font-size: 16px; font-weight: 600; letter-spacing: -.012em; }
     .mobile-menu > .btn { margin-block-start: 28px; }
     .menu-close { position: absolute; inset-block-start: 20px; inset-inline-end: 20px; width: 44px; height: 44px; display: grid; place-items: center; color: #fff; }
