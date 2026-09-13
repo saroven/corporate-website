@@ -474,13 +474,19 @@
     }, { threshold: 0.01 });
     document.querySelectorAll('.quote-section, .footer').forEach((section) => backToTopObserver.observe(section));
 
+    let userHasScrolled = false;
+    window.addEventListener('scroll', () => { userHasScrolled = true; }, { once: true, passive: true });
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
             if (!entry.isIntersecting) return;
-            entry.target.classList.add('visible');
+            if (!userHasScrolled && entry.boundingClientRect.top < window.innerHeight * 0.6) {
+                entry.target.classList.add('visible', 'reveal-instant');
+            } else {
+                entry.target.classList.add('visible');
+            }
             observer.unobserve(entry.target);
         });
-    }, { threshold: 0.12, rootMargin: '0px 0px -35px' });
+    }, { threshold: 0.2, rootMargin: '-8% 0px -8% 0px' });
     document.querySelectorAll('.reveal:not(.visible)').forEach((element) => revealObserver.observe(element));
 
     const navLinks = [...document.querySelectorAll('.desktop-nav a')];

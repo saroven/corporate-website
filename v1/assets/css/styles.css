@@ -13,6 +13,7 @@
     --radius-lg: 12px;
     --transition: .3s ease;
     --shadow: 0 14px 38px rgba(14, 14, 14, .1);
+    --dir-angle: 90deg;
     --font-display: "Inter Tight", "Inter", Arial, sans-serif;
     --font-body: "Inter", Arial, sans-serif;
     --font-arabic: "IBM Plex Sans Arabic", Arial, sans-serif;
@@ -22,7 +23,7 @@
 html { scroll-behavior: smooth; scroll-padding-top: 134px; }
 body { margin: 0; color: var(--text); overflow-x: hidden; background: var(--white); font-family: var(--font-body); font-weight: 400; line-height: 1.6; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
 body.menu-open { overflow: hidden; }
-img { display: block; max-width: 100%; }
+img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font: inherit; }
 h1, h2, h3 { font-family: var(--font-display); font-optical-sizing: auto; }
@@ -85,8 +86,8 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 /* Hero */
 .hero { position: relative; min-height: clamp(585px, 70vh, 720px); display: flex; align-items: center; isolation: isolate; overflow: hidden; background: #10151b; }
 .hero-image { position: absolute; inset: 0; z-index: -3; width: 100%; height: 100%; object-fit: cover; object-position: 62% 54%; }
-.hero-overlay { position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, rgba(8,10,12,.96) 0%, rgba(8,10,12,.84) 31%, rgba(8,10,12,.31) 61%, rgba(8,10,12,.05) 100%), linear-gradient(0deg, rgba(0,0,0,.35), transparent 45%); }
-.hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, transparent 50%, rgba(24,77,120,.14)); }
+.hero-overlay { position: absolute; inset: 0; z-index: -2; background: linear-gradient(var(--dir-angle, 90deg), rgba(8,10,12,.96) 0%, rgba(8,10,12,.84) 31%, rgba(8,10,12,.31) 61%, rgba(8,10,12,.05) 100%), linear-gradient(0deg, rgba(0,0,0,.35), transparent 45%); }
+.hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(var(--dir-angle, 90deg), transparent 50%, rgba(24,77,120,.14)); }
 .hero-content { position: relative; padding-block: 72px 78px; color: #fff; }
 .hero-content .eyebrow { margin-block-end: 10px; font-size: 14px; letter-spacing: .035em; }
 .hero h1 { margin: 0; max-width: 680px; font-family: var(--font-display); font-size: clamp(68px, 5.35vw, 92px); line-height: .92; font-weight: 800; letter-spacing: -.052em; text-shadow: 0 4px 28px rgba(0,0,0,.22); }
@@ -198,7 +199,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .quote-section { display: grid; grid-template-columns: minmax(390px, .8fr) minmax(640px, 1.5fr); min-height: 450px; color: #fff; background: #151515; }
 .quote-visual { position: relative; min-height: 450px; isolation: isolate; overflow: hidden; }
 .quote-visual > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
-.quote-visual::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(10,10,10,.78), rgba(10,10,10,.6)), linear-gradient(0deg, rgba(0,0,0,.55), transparent); }
+.quote-visual::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(var(--dir-angle, 90deg), rgba(10,10,10,.78), rgba(10,10,10,.6)), linear-gradient(0deg, rgba(0,0,0,.55), transparent); }
 .quote-visual-content { width: min(84%, 480px); margin-inline: auto; padding-block: 67px; }
 .quote-visual h2 { margin: 0; font-family: var(--font-display); font-size: clamp(32px, 3vw, 48px); line-height: 1.02; font-weight: 700; letter-spacing: -.047em; }
 .quote-visual p { margin: 18px 0 30px; color: #e5e5e5; font-size: 15px; line-height: 1.65; font-weight: 400; }
@@ -257,6 +258,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 /* Reveal motion */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
 .reveal.visible { opacity: 1; transform: none; }
+.reveal-instant { transition: none; }
 .services-grid .reveal:nth-child(2), .projects-grid .reveal:nth-child(2), .benefits-grid .reveal:nth-child(2) { transition-delay: .06s; }
 .services-grid .reveal:nth-child(3), .projects-grid .reveal:nth-child(3), .benefits-grid .reveal:nth-child(3) { transition-delay: .12s; }
 .services-grid .reveal:nth-child(4), .projects-grid .reveal:nth-child(4), .benefits-grid .reveal:nth-child(4) { transition-delay: .18s; }
@@ -304,15 +306,11 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
     inset: 0;
     z-index: -2;
     background:
-        linear-gradient(90deg, rgba(11,15,20,.96) 0%, rgba(11,15,20,.84) 48%, rgba(11,15,20,.6) 100%),
+        linear-gradient(var(--dir-angle, 90deg), rgba(11,15,20,.96) 0%, rgba(11,15,20,.84) 48%, rgba(11,15,20,.6) 100%),
         linear-gradient(0deg, rgba(11,15,20,.95) 0%, transparent 70%);
 }
 
-[dir="rtl"] .page-hero-overlay, [dir="rtl"] .about-hero-overlay {
-    background:
-        linear-gradient(270deg, rgba(11,15,20,.96) 0%, rgba(11,15,20,.84) 48%, rgba(11,15,20,.6) 100%),
-        linear-gradient(0deg, rgba(11,15,20,.95) 0%, transparent 70%);
-}
+/* Page hero overlay direction follows --dir-angle; no RTL override needed. */
 
 .page-hero-content, .about-hero-content {
     position: relative;
@@ -764,12 +762,12 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .cv-drop-highlights svg { width: 18px; height: 18px; color: var(--orange); flex-shrink: 0; }
 .cv-drop-box { padding: 32px; background: #fff; border: 1px solid #e0e0e0; box-shadow: 0 10px 30px rgba(0,0,0,.05); border-radius: 4px; }
 .cv-drop-box .field { margin-block-end: 18px; position: relative; }
-.cv-drop-box .field label { position: static !important; display: block !important; margin-block-end: 6px !important; font-size: 13px !important; font-weight: 600 !important; color: #222 !important; letter-spacing: normal !important; pointer-events: auto !important; }
-.cv-drop-box .field input, .cv-drop-box .field select { width: 100% !important; height: 48px !important; padding: 10px 16px !important; color: #111 !important; border: 1px solid #d0d0d0 !important; border-radius: 2px !important; background: #fafafa !important; font-size: 14px !important; outline: none !important; transition: border-color var(--transition), background var(--transition), box-shadow var(--transition) !important; }
+.cv-drop-box .field label { position: static; display: block; margin-block-end: 6px; font-size: 13px; font-weight: 600; color: #222; letter-spacing: normal; pointer-events: auto; }
+.cv-drop-box .field input, .cv-drop-box .field select { width: 100%; height: 48px; padding: 10px 16px; color: #111; border: 1px solid #d0d0d0; border-radius: 2px; background: #fafafa; font-size: 14px; outline: none; transition: border-color var(--transition), background var(--transition), box-shadow var(--transition); }
 .cv-drop-box .field input::placeholder { color: #888; font-size: 13.5px; }
-.cv-drop-box .field input:focus, .cv-drop-box .field select:focus { border-color: var(--orange) !important; background: #fff !important; box-shadow: 0 0 0 3px rgba(249,115,22,.12) !important; }
-.cv-drop-box .field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, #777 50%), linear-gradient(135deg, #777 50%, transparent 50%) !important; background-position: calc(100% - 18px) 21px, calc(100% - 14px) 21px !important; background-size: 5px 5px !important; background-repeat: no-repeat !important; }
-[dir="rtl"] .cv-drop-box .field select { background-position: 18px 21px, 14px 21px !important; }
+.cv-drop-box .field input:focus, .cv-drop-box .field select:focus { border-color: var(--orange); background: #fff; box-shadow: 0 0 0 3px rgba(249,115,22,.12); }
+.cv-drop-box .field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, #777 50%), linear-gradient(135deg, #777 50%, transparent 50%); background-position: calc(100% - 18px) 21px, calc(100% - 14px) 21px; background-size: 5px 5px; background-repeat: no-repeat; }
+[dir="rtl"] .cv-drop-box .field select { background-position: 18px 21px, 14px 21px; }
 
 /* Enhanced Contact Page Styles */
 .contact-hub-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-block-end: 48px; }
@@ -787,15 +785,15 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .contact-form-intro { margin: 0 0 24px; color: #666; font-size: 14px; line-height: 1.6; }
 .contact-form .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .contact-form .field { margin-block-end: 18px; position: relative; }
-.contact-form .field label { position: static !important; display: block !important; margin-block-end: 6px !important; color: #222 !important; font-size: 12.5px !important; font-weight: 650 !important; letter-spacing: normal !important; pointer-events: auto !important; }
+.contact-form .field label { position: static; display: block; margin-block-end: 6px; color: #222; font-size: 12.5px; font-weight: 650; letter-spacing: normal; pointer-events: auto; }
 .contact-form .field label em { color: var(--orange); font-style: normal; }
-.contact-form .field input, .contact-form .field select, .contact-form .field textarea { width: 100% !important; height: 48px !important; padding: 10px 16px !important; color: #111 !important; border: 1px solid #d4d4d4 !important; border-radius: 2px !important; outline: none !important; background: #fafafa !important; font-size: 14px !important; transition: border-color var(--transition), background var(--transition), box-shadow var(--transition) !important; }
-.contact-form .field textarea { height: 130px !important; min-height: 130px !important; resize: vertical !important; }
-.contact-form .field input:focus, .contact-form .field select:focus, .contact-form .field textarea:focus { border-color: var(--orange) !important; background: #fff !important; box-shadow: 0 0 0 3px rgba(249,115,22,.12) !important; }
-.contact-form .field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, #777 50%), linear-gradient(135deg, #777 50%, transparent 50%) !important; background-position: calc(100% - 18px) 21px, calc(100% - 14px) 21px !important; background-size: 5px 5px !important; background-repeat: no-repeat !important; }
-[dir="rtl"] .contact-form .field select { background-position: 18px 21px, 14px 21px !important; }
+.contact-form .field input, .contact-form .field select, .contact-form .field textarea { width: 100%; height: 48px; padding: 10px 16px; color: #111; border: 1px solid #d4d4d4; border-radius: 2px; outline: none; background: #fafafa; font-size: 14px; transition: border-color var(--transition), background var(--transition), box-shadow var(--transition); }
+.contact-form .field textarea { height: 130px; min-height: 130px; resize: vertical; }
+.contact-form .field input:focus, .contact-form .field select:focus, .contact-form .field textarea:focus { border-color: var(--orange); background: #fff; box-shadow: 0 0 0 3px rgba(249,115,22,.12); }
+.contact-form .field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, #777 50%), linear-gradient(135deg, #777 50%, transparent 50%); background-position: calc(100% - 18px) 21px, calc(100% - 14px) 21px; background-size: 5px 5px; background-repeat: no-repeat; }
+[dir="rtl"] .contact-form .field select { background-position: 18px 21px, 14px 21px; }
 .contact-form .field option { color: #111; }
-.contact-form .field.invalid input, .contact-form .field.invalid select, .contact-form .field.invalid textarea { border-color: #ff5e43 !important; }
+.contact-form .field.invalid input, .contact-form .field.invalid select, .contact-form .field.invalid textarea { border-color: #ff5e43; }
 .contact-form .field.invalid .error { display: block; position: absolute; inset-inline-start: 0; inset-block-end: -16px; color: #ff5e43; font-size: 11px; }
 
 /* Office Showcase Card (Right Column) */
@@ -878,6 +876,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 [dir="rtl"] .about-cta-actions .btn svg { transform: scaleX(-1); }
 
 /* RTL preparation */
+html[dir="rtl"] { --dir-angle: 270deg; }
 [dir="rtl"] body { font-family: var(--font-arabic); }
 html[dir="rtl"] body :where(h1, h2, h3, p, a, button, label, input, select, textarea, strong, span, b, small) { font-family: var(--font-arabic); letter-spacing: 0; }
 html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing: -.035em; }
@@ -887,7 +886,7 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
 [dir="rtl"] .section-heading h2, [dir="rtl"] .heading-row h2, [dir="rtl"] .about-content h2 { line-height: 1.16; }
 [dir="rtl"] .section-copy { line-height: 1.82; }
 [dir="rtl"] .mini-features p, [dir="rtl"] .card-body p, [dir="rtl"] .benefits-grid p, [dir="rtl"] .footer p, [dir="rtl"] .footer a { line-height: 1.72; }
-[dir="rtl"] .hero-overlay { background: linear-gradient(270deg, rgba(8,10,12,.96) 0%, rgba(8,10,12,.84) 31%, rgba(8,10,12,.31) 61%, rgba(8,10,12,.05) 100%), linear-gradient(0deg, rgba(0,0,0,.35), transparent 45%); }
+/* Overlay direction follows --dir-angle; no RTL override needed. */
 [dir="rtl"] .btn svg, [dir="rtl"] .text-link svg, [dir="rtl"] .card-body a svg, [dir="rtl"] .profile-card b svg { transform: scaleX(-1); }
 
 /* Floating WhatsApp Quick Action */
@@ -924,6 +923,34 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
 .whatsapp-label {
     white-space: nowrap;
 }
+
+/* Utility classes (replacing former inline styles) */
+.band-soft { background: #fcfcfb; border-top: 1px solid #eee; }
+.band-soft-framed { background: #fcfcfb; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+.band-compact { padding-block: clamp(48px, 5vw, 72px); background: #fcfcfb; }
+.band-compact-tight { padding-block: clamp(48px, 5vw, 68px); background: #fcfcfb; }
+.band-grey { background: #f8f9fa; }
+.flush-top { padding-block-start: 0; }
+.heading-center { text-align: center; max-width: 700px; margin-inline: auto; }
+.heading-center-wide { text-align: center; max-width: 720px; margin-inline: auto; }
+.heading-spaced { margin-block-end: 40px; }
+.heading-tight { margin-block-end: 32px; }
+.text-center { text-align: center; }
+.section-lead { margin: 12px auto 0; color: #666; font-size: 15px; line-height: 1.6; }
+.section-lead-narrow { max-width: 620px; margin: 12px auto 0; color: #666; font-size: 15px; line-height: 1.6; }
+.section-lead-fill { margin: 12px 0 0; color: #666; font-size: 15px; line-height: 1.6; }
+.on-dark { color: #fff; }
+.icon-xs { width: 12px; height: 12px; }
+.btn-sm { font-size: 12px; padding: 10px 18px; }
+.btn-block { width: 100%; }
+.btn-submit-full { width: 100%; min-height: 52px; margin-top: 8px; }
+.stack-top { margin-block-start: 20px; }
+.form-status-centered { text-align: center; margin-top: 14px; }
+.faq-grid-spaced { margin-block-start: 36px; }
+.office-name { margin: 0; color: #666; font-size: 13.5px; }
+.office-lines { margin: 4px 0 0; color: #555; font-size: 13px; line-height: 1.5; }
+.contact-hub-icon--wa { background: rgba(34,197,94,.08); color: #16a34a; }
+.hub-sub--wa { color: #16a34a; }
 
 /* Wide viewports use the 3-column services base grid above; no override needed. */
 
@@ -999,8 +1026,8 @@ html[dir="rtl"] .brand-copy b { font-family: var(--font-display); letter-spacing
     .section { padding-block: 64px; }
     .hero { min-height: min(72svh, 560px); }
     .hero-image { object-position: 64% center; }
-    .hero-overlay { background: linear-gradient(90deg, rgba(7,9,11,.94), rgba(7,9,11,.63) 70%, rgba(7,9,11,.38)), linear-gradient(0deg, rgba(0,0,0,.72), transparent); }
-    [dir="rtl"] .hero-overlay { background: linear-gradient(270deg, rgba(7,9,11,.94), rgba(7,9,11,.63) 70%, rgba(7,9,11,.38)), linear-gradient(0deg, rgba(0,0,0,.72), transparent); }
+    .hero-overlay { background: linear-gradient(var(--dir-angle, 90deg), rgba(7,9,11,.94), rgba(7,9,11,.63) 70%, rgba(7,9,11,.38)), linear-gradient(0deg, rgba(0,0,0,.72), transparent); }
+/* Mobile hero overlay direction follows --dir-angle; no RTL override needed. */
     .hero-content { padding-block: 66px 56px; }
     .hero-content .eyebrow { font-size: 13px; }
     .hero h1 { font-size: clamp(48px, 12vw, 66px); line-height: .92; letter-spacing: -2.35px; }
