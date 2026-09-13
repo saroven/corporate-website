@@ -442,7 +442,8 @@
     const updateScrollState = () => {
         const scrolled = window.scrollY > 20;
         header.classList.toggle('scrolled', scrolled);
-        backToTop.classList.toggle('visible', window.scrollY > 700 && backToTopBlockers.size === 0);
+        const pastFirstScreen = window.scrollY > Math.max(600, window.innerHeight * 0.9);
+        backToTop.classList.toggle('visible', pastFirstScreen && backToTopBlockers.size === 0);
     };
     updateScrollState();
     window.addEventListener('scroll', updateScrollState, { passive: true });
@@ -514,7 +515,11 @@
         document.querySelectorAll('[data-en][data-ar]').forEach((element) => {
             element.textContent = element.dataset[language];
         });
-        languageButtons.forEach((button) => button.classList.toggle('active', button.dataset.lang === language));
+        languageButtons.forEach((button) => {
+            const isActive = button.dataset.lang === language;
+            button.classList.toggle('active', isActive);
+            button.setAttribute('aria-pressed', String(isActive));
+        });
         menuToggle.setAttribute('aria-label', isArabic ? 'فتح قائمة التنقل' : 'Open navigation');
         menuClose.setAttribute('aria-label', isArabic ? 'إغلاق قائمة التنقل' : 'Close navigation');
         backToTop.setAttribute('aria-label', isArabic ? 'العودة إلى الأعلى' : 'Back to top');

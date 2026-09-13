@@ -49,9 +49,9 @@
                 <a class="topbar-email" href="mailto:monara1902@gmail.com"><svg><use href="#i-mail"/></svg><span dir="ltr">monara1902@gmail.com</span></a>
             </div>
             <div class="language-switcher" aria-label="Language selector">
-                <button class="language active" type="button" data-lang="en">EN</button>
+                <button class="language active" type="button" data-lang="en" aria-pressed="true">EN</button>
                 <span></span>
-                <button class="language" type="button" data-lang="ar">&#x0627;&#x0644;&#x0639;&#x0631;&#x0628;&#x064A;&#x0629;</button>
+                <button class="language" type="button" data-lang="ar" aria-pressed="false">&#x0627;&#x0644;&#x0639;&#x0631;&#x0628;&#x064A;&#x0629;</button>
             </div>
         </div>
     </div>
@@ -70,7 +70,7 @@
                 <a href="about.html" data-en="ABOUT US" data-ar="من نحن">ABOUT US</a>
                 <a href="services.html" data-en="SERVICES" data-ar="الخدمات">SERVICES</a>
                 <a href="projects.html" data-en="PROJECTS" data-ar="المشاريع">PROJECTS</a>
-                <a class="active" href="clients.html" data-en="CLIENTS" data-ar="العملاء">CLIENTS</a>
+                <a class="active" href="clients.html" aria-current="page" data-en="CLIENTS" data-ar="العملاء">CLIENTS</a>
                 <a href="careers.html" data-en="CAREERS" data-ar="الوظائف">CAREERS</a>
                 <a href="contact.html" data-en="CONTACT US" data-ar="اتصل بنا">CONTACT US</a>
             </nav>
@@ -81,7 +81,7 @@
     </header>
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
         <button class="menu-close" type="button" aria-label="Close navigation"><svg><use href="#i-x"/></svg></button>
-        <a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="clients.html" class="active">Clients</a><a href="careers.html">Careers</a><a href="contact.html">Contact Us</a>
+        <a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="clients.html" class="active" aria-current="page">Clients</a><a href="careers.html">Careers</a><a href="contact.html">Contact Us</a>
         <a href="contact.html" class="btn btn-primary">REQUEST A QUOTE</a>
     </div>
     <div class="menu-backdrop" aria-hidden="true"></div>
@@ -366,7 +366,7 @@
             <div><h3>Quick Links</h3><nav><a href="about.html">About Us</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></nav></div>
             <div><h3>Contact</h3><a href="tel:+97433730680" dir="ltr">+974 3373 0680</a><a href="mailto:monara1902@gmail.com" dir="ltr">monara1902@gmail.com</a></div>
         </div>
-        <div class="footer-bottom"><div class="container-custom"><p>&copy; <bdi dir="ltr">2026</bdi> <span data-en="MonAra Trading Contracting &amp; Services W.L.L. All Rights Reserved." data-ar="مونارا للتجارة والمقاولات والخدمات ذ.م.م. جميع الحقوق محفوظة.">MonAra Trading Contracting &amp; Services W.L.L. All Rights Reserved.</span></p><div><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div></div></div>
+        <div class="footer-bottom"><div class="container-custom"><p>&copy; <bdi dir="ltr">2026</bdi> <span data-en="MonAra Trading Contracting &amp; Services W.L.L. All Rights Reserved." data-ar="مونارا للتجارة والمقاولات والخدمات ذ.م.م. جميع الحقوق محفوظة.">MonAra Trading Contracting &amp; Services W.L.L. All Rights Reserved.</span></p><div><span class="legal-soon">Privacy Policy</span><span class="legal-soon">Terms &amp; Conditions</span></div></div></div>
     <a href="https://wa.me/97433730680?text=Hello%20MonAra%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.21-.17-.46-.29z"/></svg>
         <span class="whatsapp-label" data-en="Chat with us" data-ar="تحدث معنا">Chat with us</span>

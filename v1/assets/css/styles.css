@@ -77,6 +77,8 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .btn-outline:hover { border-color: var(--orange); background: var(--orange); }
 .btn-line { min-width: 178px; color: #222; border-color: var(--orange); background: transparent; }
 .btn-line:hover { color: #fff; background: var(--orange); }
+.btn:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+.btn-primary:disabled, .btn-primary:disabled:hover { background: var(--orange); transform: none; }
 .section-label, .eyebrow { margin: 0 0 9px; color: var(--orange); font-family: var(--font-body); font-size: 12.5px; line-height: 1.2; font-weight: 680; letter-spacing: .045em; }
 .section-heading h2, .heading-row h2, .about-content h2 { margin: 0; color: var(--text); font-family: var(--font-display); font-size: clamp(29px, 2.25vw, 42px); line-height: 1.04; font-weight: 700; letter-spacing: -.045em; }
 
@@ -247,6 +249,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .footer-bottom p { margin: 0; font-size: 11.5px; }
 .footer-bottom div div { display: flex; gap: 24px; }
 .footer-bottom a { font-size: 11.5px; }
+.footer-bottom .legal-soon { font-size: 11.5px; color: #707070; cursor: default; }
 .back-to-top { position: fixed; inset-inline-end: 24px; inset-block-end: 24px; z-index: 900; width: 42px; height: 42px; display: grid; place-items: center; color: #fff; border: 0; background: var(--orange); box-shadow: 0 8px 24px rgba(249,115,22,.28); opacity: 0; visibility: hidden; transform: translateY(14px); transition: var(--transition); }
 .back-to-top.visible { opacity: 1; visibility: visible; transform: none; }
 .back-to-top svg { width: 22px; height: 22px; }
